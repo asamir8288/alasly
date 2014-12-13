@@ -24,6 +24,9 @@ $lang['admin_form_container_hc'] = 'Container HC';
 
 $lang['admin_list_products'] = 'List Products';
 
+$lang['admin_add_new_product'] = 'Add New Product';
+$lang['admin_add_new_cat'] = 'Add New Category';
+
 $lang['admin_category_added_message'] = 'Category has been added successfully';
 $lang['admin_category_updated_message'] = 'Category has been updated successfully';
 

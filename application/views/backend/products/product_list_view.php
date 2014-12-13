@@ -1,3 +1,5 @@
+<a href="<?php echo base_url() . 'admin/product/add_edit_product'?>" class="new-link"><?php echo lang('admin_add_new_product');?></a>
+
 <table cellpadding="0" cellspacing="0" style="margin-top: 20px;margin-bottom: 20px;">
     <tr>
         <th style="width: 100px;"><?php echo lang('admin_form_banner');?></th>
