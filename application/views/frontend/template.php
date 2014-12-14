@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li class="separator"></li>
-                        <li><a href=""><?php echo lang('menu_contact_us'); ?></a></li>
+                        <li><a href="<?php echo base_url() . 'contact';?>"><?php echo lang('menu_contact_us'); ?></a></li>
                         <li class="separator"></li>
                     </ul>
 
