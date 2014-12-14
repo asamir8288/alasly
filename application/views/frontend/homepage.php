@@ -1,7 +1,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('#slideshowHolder').jqFancyTransitions({
-            width: 996, height: 562, delay: 3000, strips: 20, navigation: true
+            width: 996, height: 520, delay: 3000, strips: 20, navigation: true
         });
     });
 </script>

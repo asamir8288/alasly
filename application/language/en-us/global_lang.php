@@ -19,6 +19,7 @@ $lang['menu_home'] = 'Home';
 $lang['menu_about_us'] = 'About Us'; 
 $lang['menu_products'] = 'Products'; 
 $lang['menu_career'] = 'Careers'; 
+$lang['menu_contact_us'] = 'Contact Us'; 
 
 $lang['menu_about_us_profile'] = 'Profile';
 $lang['menu_about_us_mission'] = 'Mission & Values';

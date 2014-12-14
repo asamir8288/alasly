@@ -43,6 +43,8 @@
                         <li class="separator"></li>
                         <li><a href=""><?php echo lang('menu_career'); ?></a></li>
                         <li class="separator"></li>
+                        <li><a href=""><?php echo lang('menu_contact_us'); ?></a></li>
+                        <li class="separator"></li>
                     </ul>
 
                     <div class="subscribe">SUBSCRIBE TO <div>OUR NEWLETTER</div></div>
