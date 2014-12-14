@@ -33,4 +33,8 @@ $lang['frontend_page_title_about_innovation'] = 'Innovation Drives Our Success';
 $lang['frontend_page_title_about_foods_story'] = 'Innovation Drives Our Success';
 
 $lang['frontend_read_details'] = 'Ream More';
+
+$lang['frontend_page_title_career_mission'] = 'Mission & Culture';
+$lang['frontend_page_title_career_why_alasly'] = 'Why Al Asly?';
+$lang['frontend_page_title_career_workplace'] = 'Our Workplace';
 ?>

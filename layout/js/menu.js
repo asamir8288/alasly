@@ -7,7 +7,7 @@ $(document).ready(function(){
        $('.submenu').hide();
        var submenu = $('#' + menu_id);
        submenu.show();
-       submenu.css('top','-50px');
+       submenu.css('top','-46px');
        submenu.css('left', ($(this).position().left + 213) + 'px');
    });
    $('.submenu').mouseover(function(event){
