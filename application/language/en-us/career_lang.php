@@ -8,6 +8,6 @@ $lang['add'] = 'Add';
 
 $lang['page_main_title'] = 'Careers | ';
 
-$lang['career_mission'] = 'Mission & Culture';
-$lang['career_why_alasly'] = 'Why Al Asly?';
-$lang['career_our_workplace'] = 'Our Workplace';
+$lang['career-mission_page_title'] = 'Mission & Culture';
+$lang['why-alasly_page_title'] = 'Why Al Asly?';
+$lang['our-workplace_page_title'] = 'Our Workplace';

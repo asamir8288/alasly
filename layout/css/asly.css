@@ -524,3 +524,53 @@ body{
 .read_more:hover{
     text-decoration: underline;
 }
+
+.contact-form li{
+    margin-bottom: 10px;
+    list-style: none!important;
+}
+
+label {
+    width: 120px;
+    font-size: 15px!important;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    padding-top: 3px;
+    font-size: 13px;
+}
+
+.contact-form li .txtearia {
+    border: 1px solid #B2B2B2;
+    padding: 3px;
+    height: 100px;
+    width: 260px;
+    background-color: #d0d0d0;
+}
+
+.contact-form li .txt {
+    width: 260px;
+    height: 24px;
+    border: 1px solid #B2B2B2;
+    padding: 3px;
+    background-color: #d0d0d0;
+}
+select {
+    width: 267px;
+    height: 32px;
+    border: 1px solid #B2B2B2;
+    padding: 3px;
+    background-color: #d0d0d0;
+    font-size: 15px;
+    color: #262523!important;
+}
+.send-btn {
+    background: none;
+    border: none;
+    background-image: url(../images/send-btn.png);
+    width: 72px;
+    height: 36px;
+    background-repeat: no-repeat;
+    margin-left: 123px;
+    margin-bottom: 10px;
+}

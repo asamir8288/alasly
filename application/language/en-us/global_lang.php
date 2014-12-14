@@ -37,4 +37,19 @@ $lang['frontend_read_details'] = 'Ream More';
 $lang['frontend_page_title_career_mission'] = 'Mission & Culture';
 $lang['frontend_page_title_career_why_alasly'] = 'Why Al Asly?';
 $lang['frontend_page_title_career_workplace'] = 'Our Workplace';
+
+
+$lang['contact_page_title'] = 'Contact Us';
+$lang['contact_name'] = 'Name';
+$lang['contact_email'] = 'Email';
+$lang['contact_phone'] = 'Telephone';
+$lang['contact_company'] = 'Company';
+$lang['contact_country'] = 'Country';
+$lang['contact_reasons'] = 'Reason';
+$lang['contact_message'] = 'Message';
+
+$lang['contact_select_reason'] = 'Please select a reason';
+
+$lang['contact_send_btn'] = 'Send';
+
 ?>

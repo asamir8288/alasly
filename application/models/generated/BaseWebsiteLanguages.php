@@ -10,6 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('WebsiteLanguages', 'default');
  * @property integer $int
  * @property string $name
  * @property Doctrine_Collection $Banners
+ * @property Doctrine_Collection $Newsletter
  * @property Doctrine_Collection $ProductCategories
  * @property Doctrine_Collection $StaticPages
  * 
@@ -46,6 +47,10 @@ abstract class BaseWebsiteLanguages extends Doctrine_Record
     {
         parent::setUp();
         $this->hasMany('Banners', array(
+             'local' => 'int',
+             'foreign' => 'lang_id'));
+
+        $this->hasMany('Newsletter', array(
              'local' => 'int',
              'foreign' => 'lang_id'));
 
