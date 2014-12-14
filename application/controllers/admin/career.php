@@ -17,7 +17,9 @@ class Career extends My_Controller {
     }
     
     public function index() {
-        
+        $this->data['page_title'] = lang('page_main_title');
+        $this->template->write_view('content', 'backend/career_lnks', $this->data);
+        $this->template->render();
     }
     
     public function mission() {

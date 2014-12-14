@@ -1,4 +1,6 @@
 <?php
+$lang['update'] = 'Update';
+$lang['add'] = 'Add';
 
 $lang['login_username'] = 'Username';
 $lang['login_password'] = 'Password';
@@ -38,7 +40,7 @@ $lang['frontend_page_title_career_mission'] = 'Mission & Culture';
 $lang['frontend_page_title_career_why_alasly'] = 'Why Al Asly?';
 $lang['frontend_page_title_career_workplace'] = 'Our Workplace';
 
-
+$lang['contact_us_admin_title'] = 'Contact Us';
 $lang['contact_page_title'] = 'Contact Us';
 $lang['contact_name'] = 'Name';
 $lang['contact_email'] = 'Email';
