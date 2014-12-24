@@ -48,6 +48,8 @@
                                 <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career/why_alasly'; ?>"><?php echo lang('frontend_page_title_career_why_alasly'); ?></a></li>                                   
                                 <li class="submenu-separator"></li>
                                 <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career/our_workplace'; ?>"><?php echo lang('frontend_page_title_career_workplace'); ?></a></li>                                
+                                <li class="submenu-separator"></li>
+                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career'; ?>"><?php echo lang('available_jobs'); ?></a></li>                                
                             </ul>
                         </li>
                         <li class="separator"></li>

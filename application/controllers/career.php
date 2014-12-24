@@ -26,7 +26,7 @@ class Career extends CI_Controller {
     }
 
     public function index() {
-        $this->data['page_title'] = lang('frontend_page_title_career_mission');
+        $this->data['page_title'] = lang('available_jobs');
         $this->data['jobs'] = OpportunitesTable::getOpportunities(TRUE);
         $this->template->write_view('content', 'frontend/available_jobs', $this->data);
         $this->template->render();
@@ -35,7 +35,8 @@ class Career extends CI_Controller {
     public function details($job_id) {
         if ($job_id) {
             $this->data['job'] = OpportunitesTable::getOne($job_id);           
-
+            $this->data['page_title'] = $this->data['job']['job_title'];
+            
             $this->template->write_view('content', 'frontend/job_preview', $this->data);
             $this->template->render();
         } else {
