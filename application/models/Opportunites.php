@@ -10,7 +10,140 @@
  * @author     ##NAME## <##EMAIL##>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class Opportunites extends BaseOpportunites
-{
+class Opportunites extends BaseOpportunites {
 
+    public function addPost(array $data) {
+        $errors = $this->__validateData($data);
+//        var_dump($data['career_level_id']) ;exit;
+        if ($errors['error_flag']) {
+            return $errors;
+        } else {
+            $is_active = FALSE;
+            if (isset($data['is_active'])) {
+                $is_active = TRUE;
+            }
+
+            $o = new Opportunites();
+            $o->country_id = $data['country_id'];
+            $o->city = $data['city'];
+            $o->career_level_id = $data['career_level_id'];
+            $o->company_name = 'asly';
+            $o->industry_id = $data['industry_id'];
+            $o->job_role_id = $data['job_role_id'];
+            $o->job_title = $data['job_title'];
+            $o->about_the_job = $data['about_the_job'];
+            $o->job_requirements = $data['job_requirements'];
+            $o->years_of_experience = $data['years_of_experience'];
+            $o->min_salary = $data['min_salary'];
+            $o->max_salary = $data['max_salary'];
+            $o->number_of_vacancies = $data['number_of_vacancies'];
+            $o->keywords = $data['keywords'];
+            $o->created_at = date('ymdHis');
+            $o->post_date = date('ymdHis');
+            $o->is_active = $is_active;
+            $o->save();
+            
+            return $errors;
+        }
+    }
+    
+    public function updatePost(array $data){
+        $errors = $this->__validateData($data);
+        
+        if($errors['error_flag']){
+            return $errors;
+        }else{
+            $is_active = FALSE;
+            if (isset($data['is_active'])) {
+                $is_active = TRUE;
+            }
+            
+            Doctrine_Query::create()
+                    ->update('Opportunites o')
+                    ->set('o.country_id', '?', $data['country_id'])
+                    ->set('o.city', '?', $data['city'])
+                    ->set('o.career_level_id', '?', $data['career_level_id'])
+                    ->set('o.industry_id', '?', $data['industry_id'])
+                    ->set('o.job_role_id', '?', $data['job_role_id'])
+                    ->set('o.job_title', '?', $data['job_title'])
+                    ->set('o.about_the_job', '?', $data['about_the_job'])
+                    ->set('o.job_requirements', '?', $data['job_requirements'])
+                    ->set('o.years_of_experience', '?', $data['years_of_experience'])
+                    ->set('o.min_salary', '?', $data['min_salary'])
+                    ->set('o.max_salary', '?', $data['max_salary'])
+                    ->set('o.number_of_vacancies', '?', $data['number_of_vacancies'])
+                    ->set('o.keywords', '?', $data['keywords'])
+                    ->set('o.is_active', '?', $is_active)
+                    ->set('o.updated_at', '?', date('ymdHis'))
+                    ->where('o.id =?', $data['id'])
+                    ->execute();
+        }
+    }
+
+    private function __validateData(array $data) {
+        $error_flag = false;
+        $errors = array();
+
+        if (!required($data['about_the_job'])) {
+            $error_flag = true;
+            $errors['about_the_job'] = lang('error_about_the_job');
+        }
+        if (!required($data['city'])) {
+            $error_flag = true;
+            $errors['city'] = lang('error_job_city');
+        }
+        if (!required($data['job_requirements'])) {
+            $error_flag = true;
+            $errors['job_requirements'] = lang('error_job_requirements');
+        }
+        if (!required($data['years_of_experience'])) {
+            $error_flag = true;
+            $errors['years_of_experience'] = lang('error_years_of_experience');
+        }
+        if (!required($data['min_salary'])) {
+            $error_flag = true;
+            $errors['min_salary'] = lang('error_min_salary');
+        }
+        if (!required($data['max_salary'])) {
+            $error_flag = true;
+            $errors['max_salary'] = lang('error_max_salary');
+        }
+        if (!required($data['number_of_vacancies'])) {
+            $error_flag = true;
+            $errors['no_vacancies'] = lang('error_no_vacancies');
+        }
+        if (!required($data['keywords'])) {
+            $error_flag = true;
+            $errors['keywords'] = lang('error_keywords');
+        }
+
+        $errors['error_flag'] = $error_flag;
+
+        return $errors;
+    }
+    
+    public function switchStatus($id) {
+        $cat = OpportunitesTable::getInstance()->findBy('id', $id, Doctrine_Core::HYDRATE_SCALAR);
+
+        if ($cat[0]['dctrn_find_is_active'] == '1') {
+            $this->updateStatus($id, FALSE);
+        } else {
+            $this->updateStatus($id, TRUE);
+        }
+    } 
+    private function updateStatus($id, $new_status) {
+        Doctrine_Query::create()
+                ->update('Opportunites o')
+                ->set('o.is_active', '?', $new_status)
+                ->where('o.id =?', $id)
+                ->execute();
+    }
+    
+    public function deleteJob($id) {
+        Doctrine_Query::create()
+                ->update('Opportunites o')
+                ->set('o.deleted' , '?', TRUE)
+                ->where('o.id =?', $id)
+                ->execute();
+    }
 }

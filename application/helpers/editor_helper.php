@@ -7,7 +7,7 @@ function load_editor($element, $value = '') {
     $CI->ckeditor->ToolbarSet = 'Advanced';
     $ckeconfig = array(
         'width' => "700px",
-        'height' => '400px',    
+        'height' => '300px',    
         'enterMode' => 'ENTER_BR',
         'filebrowserBrowseUrl' => base_url() . 'ckfinder/ckfinder.html',
         'filebrowserImageBrowseUrl' => base_url() . 'ckfinder/ckfinder.html?type=Images',

@@ -19,9 +19,9 @@ function send_email($email, $subject, $body, $from = 'ahmed@dominosmedia.com') {
         'mailtype' => 'html',
     );
 
-    $CI->email->from($from, 'mapegy');
+    $CI->email->from($from, 'Al Asly');
     $CI->email->to($email);
-    $CI->email->reply_to($from, 'mapegy');
+    $CI->email->reply_to($from, 'Al Asly');
 
     $CI->email->subject($subject);
 
@@ -35,11 +35,11 @@ function send_email($email, $subject, $body, $from = 'ahmed@dominosmedia.com') {
                     </p>
                 </div>
                 <p style="font-size: 13px; font-style: italic;">Thanks &amp; Best Regards, <br />
-                mapegy Team</p>
+                Al Asly Team</p>
             </div>
             <div style="width: 600px; height: 30px;">
                 <span style="font-size: 11px;color: #404040;padding-left: 200px;padding-top: 2px;
-                      display: inline-block; margin-top: 5px;">All rights reserved &copy; mapegy ' . date('Y') . '</span>
+                      display: inline-block; margin-top: 5px;">All rights reserved &copy; Al Asly ' . date('Y') . '</span>
             </div>
         </body></html>';
 

@@ -16,4 +16,12 @@ class LookupIndustriesTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('LookupIndustries');
     }
+    
+    public static function getAllIndustries() {
+        return Doctrine_Query::create()
+                ->select('i.*')
+                ->from('LookupIndustries i')
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+    }
 }

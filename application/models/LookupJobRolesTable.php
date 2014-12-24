@@ -16,4 +16,12 @@ class LookupJobRolesTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('LookupJobRoles');
     }
+    
+    public static function getAllJobRoles() {
+        return Doctrine_Query::create()
+                ->select('jr.*')
+                ->from('LookupJobRoles jr')
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+    }
 }

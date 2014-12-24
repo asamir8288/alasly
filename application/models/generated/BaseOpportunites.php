@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('Opportunites', 'default');
  * 
  * @property integer $id
  * @property integer $country_id
+ * @property string $city
  * @property integer $career_level_id
  * @property integer $industry_id
  * @property integer $job_role_id
@@ -56,6 +57,15 @@ abstract class BaseOpportunites extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('city', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('career_level_id', 'integer', 4, array(

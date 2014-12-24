@@ -36,9 +36,13 @@ $lang['frontend_page_title_about_foods_story'] = 'Innovation Drives Our Success'
 
 $lang['frontend_read_details'] = 'Ream More';
 
+$lang['frontend_page_title_career_jobs'] = 'El Asly Career';
 $lang['frontend_page_title_career_mission'] = 'Mission & Culture';
 $lang['frontend_page_title_career_why_alasly'] = 'Why Al Asly?';
 $lang['frontend_page_title_career_workplace'] = 'Our Workplace';
+$lang['available_jobs'] = 'Available Jobs';
+$lang['list_of_available_jobs'] = 'Available Jobs';
+$lang['lnk_details'] = 'View Details';
 
 $lang['contact_us_admin_title'] = 'Contact Us';
 $lang['contact_page_title'] = 'Contact Us';

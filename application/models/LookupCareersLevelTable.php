@@ -16,4 +16,12 @@ class LookupCareersLevelTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('LookupCareersLevel');
     }
+    
+    public static function getAllCareerLevels() {
+        return Doctrine_Query::create()
+                ->select('cl.*')
+                ->from('LookupCareersLevel cl')
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+    }
 }

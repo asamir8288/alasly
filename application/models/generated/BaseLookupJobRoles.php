@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('LookupJobRoles', 'default');
  * 
  * @property integer $id
  * @property string $name
+ * @property string $ar_name
  * @property Doctrine_Collection $Opportunites
  * 
  * @package    ##PACKAGE##
@@ -36,6 +37,15 @@ abstract class BaseLookupJobRoles extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('ar_name', 'string', 45, array(
+             'type' => 'string',
+             'length' => 45,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

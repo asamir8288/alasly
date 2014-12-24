@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('LookupIndustries', 'default');
  * 
  * @property integer $id
  * @property string $name
+ * @property string $ar_name
  * @property Doctrine_Collection $Opportunites
  * 
  * @package    ##PACKAGE##
@@ -36,6 +37,15 @@ abstract class BaseLookupIndustries extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('ar_name', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

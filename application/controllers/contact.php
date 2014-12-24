@@ -39,5 +39,15 @@ class Contact extends CI_Controller {
         $this->template->write_view('content', 'frontend/contact_form', $this->data);
         $this->template->render();
     }
+    
+    private function sendEmail(array $data) {
+        $body = '<p>'. lang('contact_name') .': '. $data['name'] .'</p>';
+        $body .= '<p>'. lang('contact_email') .': '. $data['email'] .'</p>';
+        $body .= '<p>'. lang('contact_phone') .': '. $data['phone'] .'</p>';
+        $body .= '<p>'. lang('contact_company') .': '. $data['company'] .'</p>';
+        $body .= '<p>'. lang('contact_country') .': '. $data['country_id'] .'</p>';
+        $body .= '<p>'. lang('contact_reasons') .': '. $data['country_id'] .'</p>';
+        send_email();
+    }
 
 }

@@ -3,28 +3,23 @@
 </div> 
 
 <div class="job-details">
-    <div class="job-title">(Senior) Support Engineer</div>
+    <div class="job-title"><?php echo $job['job_title']?></div>
     <div class="company_name">Al Asly</div>
-    <div class="posted-date">Date Posted 02 - 11 - 2014</div>
+    <div class="posted-date">Date Posted <?php echo date('d-m-Y', strtotime($job['post_date']));?></div>
 
     <div class="separator"></div>
 
     <div class="section-title"><span>ABOUT</span> THE JOB</div>
 
     <div class="about-job-details">
-        <ul>
-            <li>Web Designer needed.</li>
-            <li>Must have knowledge of html, html5, PHP, Wordpress and Joomla.</li>
-            <li>Photoshop is a plus.</li>
-            <li>Working hours : 8 hours per day / one day off per week.</li>
-        </ul>
+        <?php echo $job['about_the_job'];?>
 
-        <div class="keywords"><span>Keywords:</span> Web Design, Joomla, HTML, HTML5</div>
+        <div class="keywords"><span>Keywords:</span> <?php echo $job['keywords'];?></div>
     </div>
 
     <div class="section-title"><span>Job</span> Description</div>
     <div class="job-desc">
-        Swand is a company which provides solutions for all kind of businesses. No matter how big is your business, Swand is here to provide you with all kinds of solutions such as: software to make it easier for your employees, web solutions to make it easier for your clients and marketing solutions to reach the biggest range of customers you willing to have. Swand makes it easy. 
+        <?php echo $job['job_requirements'];?>
     </div>
 
 </div>
@@ -33,31 +28,28 @@
 
     <ul>
         <li>
-            <span>Location</span>Ein shams, Cairo, Egypt
+            <span>Location</span><?php echo $job['city'] . ', ' . $job['LookupCountries']['name'];?>
         </li>
         <li>
-            <span>Industry</span>Computer/IT Services, Graphic Design , Internet Services
+            <span>Industry</span><?php echo $job['LookupIndustries']['name'];?>
         </li>
         <li>
-            <span>Job Role</span>Creative/Design
+            <span>Job Role</span><?php echo $job['LookupJobRoles']['name'];?>
+        </li>        
+        <li>
+            <span>Years of Experience</span><?php echo $job['years_of_experience'];?>
         </li>
         <li>
-            <span>Job Type</span>Full Time
+            <span>Salary</span><?php echo $job['min_salary'];?> to <?php echo $job['max_salary']?> EGP Per month
         </li>
         <li>
-            <span>Years of Experience</span>0 to 3 years
+            <span>Career Level</span><?php echo $job['LookupCareersLevel']['name'];?>
         </li>
         <li>
-            <span>Salary</span>1200 to 1400 EGP Per month
+            <span>Number of Vacancies</span><?php echo $job['number_of_vacancies'];?>
         </li>
         <li>
-            <span>Career Level</span>Entry Level
-        </li>
-        <li>
-            <span>Number of Vacancies</span>1
-        </li>
-        <li>
-            <span>Keywords</span>Web Design, Joomla, HTML, HTML5 
+            <span>Keywords</span><?php echo $job['keywords'];?>
         </li> 
         <a href="" class="apply-now">apply now</a>                      
     </ul>

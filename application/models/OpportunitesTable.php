@@ -16,4 +16,26 @@ class OpportunitesTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Opportunites');
     }
+    
+    public static function getOne($job_id) {
+        return Doctrine_Query::create()
+                ->select('o.*, c.*, cl.*, i.*, r.*')
+                ->from('Opportunites o, o.LookupCountries c, o.LookupCareersLevel cl, o.LookupIndustries i, o.LookupJobRoles r')
+                ->where('o.id =?', $job_id)
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->fetchOne();
+    }
+    
+    public static function getOpportunities($active = FALSE) {
+        $q = Doctrine_Query::create()
+                ->select('o.*, c.*, r.*')
+                ->from('Opportunites o, o.LookupCountries c, o.LookupJobRoles r');
+        if($active){
+                $q = $q->where('o.is_active=?', TRUE);
+        }
+               $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+               
+        return $q;
+    }
 }
