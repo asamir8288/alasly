@@ -72,6 +72,7 @@ and open the template in the editor.
     width: 165px;
     height: 165px;
     margin: 5px;
+    margin-left: 12px;
 }
 
 #dashboard-menu a.home{
@@ -154,6 +155,7 @@ and open the template in the editor.
     width: 93px;
     height: 93px;
     margin: 5px;
+    margin-left: 35px;
     background-position: 0px 0px;
 }
 #inside-menu a:hover{
@@ -189,6 +191,8 @@ and open the template in the editor.
 }
 #inside-menu a.dashboard{
     background-image: url(../images/admin/s_dashboard.png);
+    position: relative;
+    top: 2px;
 }
 #inside-menu a.clients{
     background-image: url(../images/admin/s_clients.png);
@@ -231,4 +235,34 @@ and open the template in the editor.
     position: absolute;
     top: 5px;
     right: 5px;
+}
+
+.inside-menu-bg{
+    background-color: #e4e5e7;
+    margin-top: 0px;
+    padding: 5px 0px 25px 0px;
+}
+
+.inside-main-menu {
+    background-image: URL(../images/admin/btn-admin-menu.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 57px;
+    display: inline-block;
+    text-decoration: none;
+}
+.inside-main-menu span{
+    position: relative;
+    text-align: center;
+    top: 12px;
+    left: 60px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 25px;
+}
+
+.links li{
+    display: inline-block;
+    margin-left: 27px;
+    margin-top: 30px;
 }

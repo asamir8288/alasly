@@ -37,6 +37,8 @@ class About_us extends My_Controller {
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('profile_page_title');
         
+        $this->data['inside_sub_menu'] = 'about_lnks';
+        
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
         
         $this->template->write_view('content', 'backend/about', $this->data);
@@ -58,6 +60,8 @@ class About_us extends My_Controller {
         $this->data['post_url'] = 'admin/about_us/mission';
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('mission_page_title');
+        
+        $this->data['inside_sub_menu'] = 'about_lnks';
         
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
         
@@ -81,6 +85,8 @@ class About_us extends My_Controller {
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('innovation_page_title');
         
+        $this->data['inside_sub_menu'] = 'about_lnks';
+        
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
         
         $this->template->write_view('content', 'backend/about', $this->data);
@@ -102,6 +108,8 @@ class About_us extends My_Controller {
         $this->data['post_url'] = 'admin/about_us/foods_story';
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('foods_story_page_title');
+        
+        $this->data['inside_sub_menu'] = 'about_lnks';
         
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
         

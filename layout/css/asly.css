@@ -95,15 +95,22 @@ body{
 
 .left-section .menu li a{
     margin: 0px; display: block; width: 100%; height: 100%;
-    background-image: url(../images/menu-item-arrow.png);
-    background-position: 0 6px;
-    background-repeat: no-repeat;
-    padding-left: 32px;
+/*    background-image: url(../images/menu-item-arrow.png);
+    background-position: 0 6px;*/
+    /*background-repeat: no-repeat;*/
+    /*padding-left: 32px;*/
     position: relative;
-    top: 14px;
+    top: 5px;
     color: #FFF;
     text-decoration: none;
     left: 20px;
+}
+.left-section .menu li a img{
+    position: relative;
+    right: 10px;
+    top: 4px;
+    left: 5px;
+    margin-right: 13px;
 }
 
 .left-section .separator{
@@ -429,15 +436,15 @@ body{
 }
 
 .submenu_bg{
-    background-image: URL(../images/sub-menu-bg.png);
-    width: 300px;
+    background-image: URL(../images/sub-menu_bg.png);
+    width: 275px;
     height: 40px!important;
     display: block;
     /*border-bottom: 1px solid #5c0104;*/
 }
 .submenu li:hover{
     background-color: transparent!important;	
-    width: 300px!important;
+    width: 275px!important;
     height: 40px;
     z-index: 1000;
     position: relative;
@@ -455,11 +462,11 @@ body{
     left: 0px!important;
 }
 .submenu-separator{
-    background-image: URL(../images/submenu-separator.png);
+    background-image: URL(../images/submenu-separator_1.png);
     background-repeat: no-repeat;
-    width: 304px;
+    width: 275px;
     display: block;
-    height: 2px!important;
+    height: 1px!important;
 }
 
 .internal{
@@ -483,7 +490,12 @@ body{
     font-size: 16px!important;
     position: relative!important;
     margin-left: 25px;
-    top: 11px!important;
+    top: 6px!important;
+}
+.left-section .menu li a.sub-menu-link img{
+    position: relative;
+    right: 10px;
+    top: 4px;
 }
 .bullets{
     background-image: URL(../images/bullet.png);

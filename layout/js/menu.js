@@ -8,7 +8,7 @@ $(document).ready(function(){
        var submenu = $('#' + menu_id);
        submenu.show();
        submenu.css('top','-46px');
-       submenu.css('left', ($(this).position().left + 213) + 'px');
+       submenu.css('left', ($(this).position().left + 230) + 'px');
    });
    $('.submenu').mouseover(function(event){
        event.stopPropagation();

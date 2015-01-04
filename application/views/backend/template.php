@@ -19,6 +19,23 @@
                 <a class="logout" href="<?php echo site_url('admin/login/logout'); ?>"><?php echo lang('logout'); ?></a>
             <?php } ?>
         </div>
+        
+        <div class="inside-menu-bg">
+            <div id="wrapper">
+                 <!-- Here we are going to set the icons of the top Menu if the current page is not the Dashboard -->
+            <?php if (!isset($is_dashboard)) { ?>
+                <div id="inside-menu">
+                    <a href="<?php echo site_url('admin/dashboard'); ?>" class="dashboard"></a>
+                    <a href="<?php echo site_url('admin/banner'); ?>" class="home-banners"></a>
+                    <a href="<?php echo site_url('admin/about_us'); ?>" class="about"></a>
+                    <a href="<?php echo site_url('admin/product'); ?>" class="product"></a>
+                    <a href="<?php echo site_url('admin/career'); ?>" class="careers"></a>
+                    <!--<a href="<?php echo site_url('admin/legal_policy'); ?>" class="legal_plicy"></a>-->
+                    <a href="<?php echo site_url('admin/contact'); ?>" class="contacts"></a>
+                </div>
+            <?php } ?>
+            </div>
+        </div>
 
         <div id="wrapper">
             <?php
@@ -31,19 +48,10 @@
                 <?php
             }
             ?>
-
-            <!-- Here we are going to set the icons of the top Menu if the current page is not the Dashboard -->
-            <?php if (!isset($is_dashboard)) { ?>
-                <div id="inside-menu">
-                    <a href="<?php echo site_url('admin/dashboard'); ?>" class="dashboard"></a>
-                    <a href="<?php echo site_url('admin/banner'); ?>" class="home-banners"></a>
-                    <a href="<?php echo site_url('admin/about_us'); ?>" class="about"></a>
-                    <a href="<?php echo site_url('admin/product'); ?>" class="product"></a>
-                    <a href="<?php echo site_url('admin/career'); ?>" class="careers"></a>
-                    <!--<a href="<?php echo site_url('admin/legal_policy'); ?>" class="legal_plicy"></a>-->
-                    <a href="<?php echo site_url('admin/contact'); ?>" class="contacts"></a>
-                </div>
-            <?php } ?>
+            
+            
+            <?php echo (isset($inside_sub_menu)) ? $this->load->view('backend/' . $inside_sub_menu) : '';?>
+           
             
             <?php echo (isset($page_title)) ? '<div class="admin-page-title">' . $page_title . '</div>' : '';?>
             <?php echo $content; ?>

@@ -54,9 +54,18 @@ function generate_error_message($message) {
 function productMenu() {
     $categories = ProductCategoriesTable::getAllCategories(TRUE);
     $html = '';
+    $i = 0;
     foreach($categories as $cat){
         $html .= '<li class="submenu_bg"><a class="sub-menu-link" href="'. base_url() .'product/category/'. $cat['id'] .'">' . $cat['name'] . '</a></li>
-                  <li class="submenu-separator"></li>';
+                  ';
+        
+        $i++;
+        
+        if($i < count($categories)){
+            $html .= '<li class="submenu-separator"></li>';
+        }
+        
+        
     }
     
     return $html;

@@ -20,40 +20,103 @@
                     <div class="search-separator"></div>
 
                     <ul class="menu">
-                        <li><a href="<?php echo base_url(); ?>"><?php echo lang('menu_home'); ?></a></li>
+                        <li><a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url() . 'layout/images/menu-home.png'; ?>" />
+                                <?php echo lang('menu_home'); ?></a></li>
                         <li class="separator"></li>
-                        <li><a href="" menu_id="about"  class="sub"><?php echo lang('menu_about_us'); ?></a>
+                        <li><a href="" menu_id="about"  class="sub">
+                                <img src="<?php echo base_url() . 'layout/images/menu-about-icon.png'; ?>" />
+                                <?php echo lang('menu_about_us'); ?></a>
                             <ul class="submenu" id="about" style="display: none;position: relative;">
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'about_us/profile'; ?>"><?php echo lang('menu_about_us_profile'); ?></a></li>
+                                <li class="submenu_bg">                     
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'about_us/profile'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/profile-icon.png'; ?>" />
+                                        <?php echo lang('menu_about_us_profile'); ?>
+                                    </a>
+                                </li>
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'about_us/mission'; ?>"><?php echo lang('menu_about_us_mission'); ?></a></li>                                   
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'about_us/mission'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/about-mission.png'; ?>" />
+                                        <?php echo lang('menu_about_us_mission'); ?>
+                                    </a>
+                                </li>                                   
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'about_us/innovation'; ?>"><?php echo lang('menu_about_us_innovation'); ?></a></li>                                  
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'about_us/innovation'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/innovation.png'; ?>" />
+                                        <?php echo lang('menu_about_us_innovation'); ?></a>
+                                </li>                                  
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'about_us/foods_story'; ?>"><?php echo lang('menu_about_us_foods_story'); ?></a></li>                                  
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'about_us/foods_story'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/foods-story.png'; ?>" />
+                                        <?php echo lang('menu_about_us_foods_story'); ?>
+                                    </a>
+                                </li>                                  
                             </ul>
                         </li>
                         <li class="separator"></li>
                         <li>
-                            <a href="" menu_id="products"  class="sub"><?php echo lang('menu_products'); ?></a>
+                            <a style="top: 8px;"  href="" menu_id="products"  class="sub">
+                                <img src="<?php echo base_url() . 'layout/images/menu-product-icon.png'; ?>" />
+                                <?php echo lang('menu_products'); ?></a>
                             <ul class="submenu" id="products" style="display: none;position: relative;">
-                                <?php echo productMenu(); ?>
+                               
+                                    <li class="submenu_bg">
+                                        <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/2'; ?>">
+                                            <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
+                                            <?php echo lang('frontend_product-halawa'); ?>
+                                        </a>
+                                    </li>
+                                    <li class="submenu-separator"></li>
+                                    <li class="submenu_bg">
+                                        <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/3'; ?>">
+                                            <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
+                                            <?php echo lang('frontend_product-tahina'); ?>
+                                        </a>
+                                    </li>   
+                              
                             </ul>
                         </li>
                         <li class="separator"></li>
-                        <li><a href="" menu_id="career"  class="sub"><?php echo lang('menu_career'); ?></a>
+                        <li><a href="" menu_id="career"  class="sub">
+                                <img src="<?php echo base_url() . 'layout/images/menu-career-icon.png'; ?>" />
+                                <?php echo lang('menu_career'); ?></a>
                             <ul class="submenu" id="career" style="display: none;position: relative;">
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career/mission_culure'; ?>"><?php echo lang('frontend_page_title_career_mission'); ?></a></li>
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'career/mission_culure'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/career-mission.png'; ?>" />
+                                        <?php echo lang('frontend_page_title_career_mission'); ?>
+                                    </a>
+                                </li>
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career/why_alasly'; ?>"><?php echo lang('frontend_page_title_career_why_alasly'); ?></a></li>                                   
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'career/why_alasly'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/why-alasly.png'; ?>" />
+                                        <?php echo lang('frontend_page_title_career_why_alasly'); ?>
+                                    </a>
+                                </li>                                   
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career/our_workplace'; ?>"><?php echo lang('frontend_page_title_career_workplace'); ?></a></li>                                
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'career/our_workplace'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/our-workplace.png'; ?>" />
+                                        <?php echo lang('frontend_page_title_career_workplace'); ?>
+                                    </a>
+                                </li>                                
                                 <li class="submenu-separator"></li>
-                                <li class="submenu_bg"><a class="sub-menu-link" href="<?php echo base_url() . 'career'; ?>"><?php echo lang('available_jobs'); ?></a></li>                                
+                                <li class="submenu_bg">
+                                    <a class="sub-menu-link" href="<?php echo base_url() . 'career'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/available-jobs.png'; ?>" />
+                                        <?php echo lang('available_jobs'); ?>
+                                    </a>
+                                </li>                                
                             </ul>
                         </li>
                         <li class="separator"></li>
-                        <li><a href="<?php echo base_url() . 'contact';?>"><?php echo lang('menu_contact_us'); ?></a></li>
+                        <li><a style="top: 11px;" href="<?php echo base_url() . 'contact'; ?>">
+                                <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
+                                <?php echo lang('menu_contact_us'); ?></a></li>
                         <li class="separator"></li>
                     </ul>
 
