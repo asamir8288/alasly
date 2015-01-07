@@ -27,6 +27,7 @@ class Career extends CI_Controller {
 
     public function index() {
         $this->data['page_title'] = lang('available_jobs');
+        $this->data['inside_banner'] = 'we-are-hiring-banner_1.png';
         $this->data['jobs'] = OpportunitesTable::getOpportunities(TRUE);
         $this->template->write_view('content', 'frontend/available_jobs', $this->data);
         $this->template->render();
@@ -36,6 +37,7 @@ class Career extends CI_Controller {
         if ($job_id) {
             $this->data['job'] = OpportunitesTable::getOne($job_id);           
             $this->data['page_title'] = $this->data['job']['job_title'];
+            $this->data['inside_banner'] = 'we-are-hiring-banner_1.png';
             
             $this->template->write_view('content', 'frontend/job_preview', $this->data);
             $this->template->render();
@@ -46,6 +48,7 @@ class Career extends CI_Controller {
 
     public function mission_culure() {
         $this->data['page_title'] = lang('frontend_page_title_career_mission');
+        $this->data['inside_banner'] = 'career_mission_banner.png';
         $page_id = 'career-mission';
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
@@ -53,6 +56,7 @@ class Career extends CI_Controller {
 
     public function why_alasly() {
         $this->data['page_title'] = lang('frontend_page_title_career_why_alasly');
+        $this->data['inside_banner'] = 'why_alasly_banner.png';
         $page_id = 'why-alasly';
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
@@ -60,6 +64,7 @@ class Career extends CI_Controller {
 
     public function our_workplace() {
         $this->data['page_title'] = lang('frontend_page_title_career_workplace');
+        $this->data['inside_banner'] = 'our_workplace_banner.png';
         $page_id = 'our-workplace';
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
