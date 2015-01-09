@@ -620,3 +620,10 @@ select {
     padding: 6px;
     background-color: #282828;
 }
+
+.see_related_products{
+    color: #a5080c;
+    font-size: 15px;
+    float: right;
+    margin-top: 20px;
+} 

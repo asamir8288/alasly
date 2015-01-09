@@ -37,3 +37,5 @@ $lang['admin_product_updated_message'] = 'Product has been updated successfully'
 $lang['frontend_product_cat'] = 'Category';
 $lang['frontend_product_name'] = 'Name';
 $lang['frontend_product_desc'] = 'Description';
+
+$lang['frontend_see_related_product'] = "See %s's Products";

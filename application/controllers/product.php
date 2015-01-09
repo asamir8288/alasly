@@ -50,6 +50,20 @@ class Product extends CI_Controller {
             redirect('/');
         }
     }
+    
+    public function list_products($cat_id) {
+        if ($cat_id) {
+            $this->data['category'] = ProductCategoriesTable::getOne($cat_id);
+            $this->data['cat_products'] = ProductsTable::getAllCategoryProducts($cat_id, TRUE);
+
+            $this->data['page_title'] = $this->data['category']['name'];
+
+            $this->template->write_view('content', 'frontend/list_products', $this->data);
+            $this->template->render();
+        } else {
+            redirect('/');
+        }
+    }
 
     public function new_products() {
         $this->data['new_products'] = ProductsTable::getNewProducts();
