@@ -442,6 +442,13 @@ body{
     display: block;
     /*border-bottom: 1px solid #5c0104;*/
 }
+.submenu_bg:hover{
+    background-image: URL(../images/sub-menu-bg-hover.png);
+    width: 275px;
+    height: 40px!important;
+    display: block;
+    /*border-bottom: 1px solid #5c0104;*/
+}
 .submenu li:hover{
     background-color: transparent!important;	
     width: 275px!important;
