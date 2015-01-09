@@ -65,5 +65,6 @@ $lang['contact_send_btn'] = 'Send';
 
 $lang['frontend_new_products'] = 'New Products';
 $lang['frontend_list_new_products'] = 'List of New Products';
+$lang['frontend_search_results'] = 'Search';
 
 ?>

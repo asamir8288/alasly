@@ -62,4 +62,17 @@ class ProductsTable extends Doctrine_Table
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->execute();
     }
+    
+    public static function searchProducts($keyword, $lang_id){
+        $q = Doctrine_Query::create()
+                ->select('p.*, pc.*')
+                ->from('Products p, p.ProductCategories pc')
+                ->where('p.deleted =0')
+                ->andWhere('pc.lang_id=?', $lang_id)
+                ->andWhere('p.name LIKE "%'. $keyword .'%" OR p.description LIKE "%'. $keyword .'%" OR pc.name LIKE "%'. $keyword .'%"')
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+        
+        return $q;
+    }
 }

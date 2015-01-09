@@ -17,7 +17,12 @@
                 <div class="left-section">
                     <a href="<?php echo base_url(); ?>" class="logo"></a>
 
-                    <div class="search">Search ...</div>
+                    <div class="search">
+                        <form method="post" action="<?php echo base_url();?>search/index">
+                            <input type="text" placeholder="Search" class="search-box" name="search" />
+                            <input type="submit" name="submit" value="" class="search-btn" />
+                        </form>
+                    </div>
                     <div class="search-separator"></div>
 
                     <ul class="menu">
@@ -63,21 +68,21 @@
                                 <img src="<?php echo base_url() . 'layout/images/menu-product-icon.png'; ?>" />
                                 <?php echo lang('menu_products'); ?></a>
                             <ul class="submenu" id="products" style="display: none;position: relative;">
-                               
-                                    <li class="submenu_bg">
-                                        <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/2'; ?>">
-                                            <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
-                                            <?php echo lang('frontend_product-halawa'); ?>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-separator"></li>
-                                    <li class="submenu_bg">
-                                        <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/3'; ?>">
-                                            <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
-                                            <?php echo lang('frontend_product-tahina'); ?>
-                                        </a>
-                                    </li>   
-                              
+
+                                <li class="submenu_bg">
+                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/2'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
+                                        <?php echo lang('frontend_product-halawa'); ?>
+                                    </a>
+                                </li>
+                                <li class="submenu-separator"></li>
+                                <li class="submenu_bg">
+                                    <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/3'; ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
+                                        <?php echo lang('frontend_product-tahina'); ?>
+                                    </a>
+                                </li>   
+
                             </ul>
                         </li>
                         <li class="separator"></li>
@@ -123,8 +128,8 @@
                                 <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
                                 <?php echo lang('menu_export'); ?></a></li>
                         <li class="separator"></li>
-                        <?php echo newProducts();?>
-                        
+                        <?php echo newProducts(); ?>
+
                     </ul>                
                 </div>
                 <div class="<?php echo isset($is_homepage) ? 'right-section' : 'inside-right-section'; ?>">
