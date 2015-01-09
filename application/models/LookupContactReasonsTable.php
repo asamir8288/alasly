@@ -17,10 +17,11 @@ class LookupContactReasonsTable extends Doctrine_Table
         return Doctrine_Core::getTable('LookupContactReasons');
     }
     
-    public static function getAllReasons() {
+    public static function getAllReasons($except = 6) {
         return Doctrine_Query::create()
                 ->select('r.*')
                 ->from('LookupContactReasons r')
+                ->where('r.id <> ?', $except)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->execute();
     }

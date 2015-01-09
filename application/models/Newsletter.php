@@ -12,5 +12,17 @@
  */
 class Newsletter extends BaseNewsletter
 {
-
+    public function addContact(array $data) {
+        $c = new Newsletter();
+        $c->lang_id = $data['lang_id'];
+        $c->name = $data['name'];
+        $c->email = $data['email'];
+        $c->phone = $data['phone'];
+        $c->company = $data['company'];
+        $c->country_id = $data['country_id'];
+        $c->reason_id = $data['reason_id'];
+        $c->message = $data['message'];
+        $c->created_at = date('dmyHis');
+        $c->save();
+    }
 }

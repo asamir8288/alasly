@@ -72,6 +72,11 @@
         <label for="admin_form_publish"><?php echo lang('admin_form_publish'); ?>:</label>
         <input type="checkbox" <?php echo (isset($data['is_active']) && $data['is_active']) ? 'checked="checked"' : ''; ?> name="is_active" value="yes" id="form_publish" class="chkbox" />
     </li>    
+    
+    <li>
+        <label for="admin_form_new"><?php echo lang('admin_form_new'); ?>:</label>
+        <input type="checkbox" <?php echo (isset($data['is_new']) && $data['is_new']) ? 'checked="checked"' : ''; ?> name="is_new" value="yes" id="form_new" class="chkbox" />
+    </li>    
     <li>
         <input type="submit" name="submit" value="<?php echo $submit_btn; ?>" class="form-submit-btn" />  
         <a href="<?php echo base_url(); ?>admin/product"><?php echo lang('cancel'); ?></a>

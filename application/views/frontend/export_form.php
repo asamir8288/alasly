@@ -3,10 +3,9 @@
 </div> 
 
 <div class="internal">
-    <div class="title"><?php echo lang('contact_page_title');?></div>
+    <div class="title"><?php echo lang('export_page_title');?></div>
     
-    <div style="float: left;width: 540px;">
-        <?php echo form_open('contact/index'); ?>
+        <?php echo form_open('contact/export'); ?>
         <ul class="contact-form">
             <li>
                 <label for=""><?php echo lang('contact_name'); ?>:</label>
@@ -31,16 +30,7 @@
                         <option value="<?php echo $country['id'] ?>"><?php echo $country['name']; ?></option>
                     <?php } ?>
                 </select>
-            </li>
-            <li>
-                <label for=""><?php echo lang('contact_reasons'); ?>:</label>
-                <select name="reason_id">
-                    <option value=""><?php echo lang('contact_select_reason') ?></option>
-                    <?php foreach ($reasons as $reason) { ?>
-                        <option value="<?php echo $reason['id'] ?>"><?php echo $reason['reason']; ?></option>
-                    <?php } ?>
-                </select>
-            </li>
+            </li>            
             <li>
                 <label for=""><?php echo lang('contact_message'); ?>:</label>
                 <textarea name="message" class="txtearia"></textarea>
@@ -50,9 +40,5 @@
             </li>
         </ul>
         <?php echo form_close(); ?>
-    </div>
-    
-    <div style="float: left;width: 350px;">
-        <?php echo $data['description'];?>
-    </div>
+       
 </div>

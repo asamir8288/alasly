@@ -55,20 +55,39 @@ function productMenu() {
     $categories = ProductCategoriesTable::getAllCategories(TRUE);
     $html = '';
     $i = 0;
-    foreach($categories as $cat){
-        $html .= '<li class="submenu_bg"><a class="sub-menu-link" href="'. base_url() .'product/category/'. $cat['id'] .'">' . $cat['name'] . '</a></li>
+    foreach ($categories as $cat) {
+        $html .= '<li class="submenu_bg"><a class="sub-menu-link" href="' . base_url() . 'product/category/' . $cat['id'] . '">' . $cat['name'] . '</a></li>
                   ';
-        
+
         $i++;
-        
-        if($i < count($categories)){
+
+        if ($i < count($categories)) {
             $html .= '<li class="submenu-separator"></li>';
         }
-        
-        
     }
-    
+
     return $html;
+}
+
+function newProducts() {
+    $html = '';
+    if (ProductsTable::getCountNewProducts() > 0) {
+        $html = '<li>';
+        $html .= '<a href="' . site_url('product/new_products') . '">';
+        $html .= '<img src="' . base_url() . 'layout/images/menu-about-icon.png" />';
+        $html .= lang('frontend_new_products') . '</a>';
+        $html .= '</li>';
+        $html .= '<li class="separator"></li>';
+    }
+
+    return $html;
+}
+
+function pre_print($object) {
+    echo '<pre>';
+    print_r($object);
+    echo '</pre>';
+    exit();
 }
 
 ?>

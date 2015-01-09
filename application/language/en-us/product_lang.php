@@ -14,6 +14,7 @@ $lang['admin_form_description'] = 'Description';
 $lang['admin_form_banner'] = 'Banner';
 $lang['admin_form_main_image'] = 'Image';
 $lang['admin_form_publish'] = 'Publish';
+$lang['admin_form_new'] = 'New';
 $lang['admin_form_vedio'] = 'Vedio URL';
 $lang['admin_form_type'] = 'Type';
 $lang['admin_form_weight'] = 'Weight';
@@ -33,5 +34,6 @@ $lang['admin_category_updated_message'] = 'Category has been updated successfull
 $lang['admin_product_added_message'] = 'Product has been added successfully';
 $lang['admin_product_updated_message'] = 'Product has been updated successfully';
 
+$lang['frontend_product_cat'] = 'Category';
 $lang['frontend_product_name'] = 'Name';
 $lang['frontend_product_desc'] = 'Description';

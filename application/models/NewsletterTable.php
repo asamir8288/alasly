@@ -16,4 +16,13 @@ class NewsletterTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Newsletter');
     }
+    
+    public static function getObject($table, $field_name, $id) {
+        return Doctrine_Query::create()
+                ->select("o.{$field_name}")
+                ->from("{$table} o")
+                ->where('o.id =?', $id)
+                ->setHydrationMode(Doctrine::HYDRATE_SCALAR)
+                ->fetchOne();
+    }
 }

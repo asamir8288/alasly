@@ -22,6 +22,7 @@ $lang['menu_about_us'] = 'About Us';
 $lang['menu_products'] = 'Products'; 
 $lang['menu_career'] = 'Careers'; 
 $lang['menu_contact_us'] = 'Contact Us'; 
+$lang['menu_export'] = 'Export'; 
 
 $lang['menu_about_us_profile'] = 'Profile';
 $lang['menu_about_us_mission'] = 'Mission & Values';
@@ -49,6 +50,7 @@ $lang['frontend_product-tahina'] = 'Tahina';
 
 $lang['contact_us_admin_title'] = 'Contact Us';
 $lang['contact_page_title'] = 'Contact Us';
+$lang['export_page_title'] = 'Export';
 $lang['contact_name'] = 'Name';
 $lang['contact_email'] = 'Email';
 $lang['contact_phone'] = 'Telephone';
@@ -60,5 +62,8 @@ $lang['contact_message'] = 'Message';
 $lang['contact_select_reason'] = 'Please select a reason';
 
 $lang['contact_send_btn'] = 'Send';
+
+$lang['frontend_new_products'] = 'New Products';
+$lang['frontend_list_new_products'] = 'List of New Products';
 
 ?>

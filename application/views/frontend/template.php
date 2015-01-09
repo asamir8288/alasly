@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title><?php echo (isset($page_title)) ? $page_title : ''; ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/asly.css"/>
         <?php echo $_styles; ?>
@@ -118,11 +119,13 @@
                                 <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
                                 <?php echo lang('menu_contact_us'); ?></a></li>
                         <li class="separator"></li>
-                    </ul>
-
-                    <div class="subscribe">SUBSCRIBE TO <div>OUR NEWLETTER</div></div>
-
-                    <div class="subscribe-box"></div>
+                        <li><a style="top: 11px;" href="<?php echo base_url() . 'contact/export'; ?>">
+                                <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
+                                <?php echo lang('menu_export'); ?></a></li>
+                        <li class="separator"></li>
+                        <?php echo newProducts();?>
+                        
+                    </ul>                
                 </div>
                 <div class="<?php echo isset($is_homepage) ? 'right-section' : 'inside-right-section'; ?>">
                     <?php echo $content; ?>                           

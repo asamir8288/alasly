@@ -17,9 +17,9 @@ Doctrine_Manager::getInstance()->bindComponent('Newsletter', 'default');
  * @property integer $reason_id
  * @property string $message
  * @property timestamp $created_at
- * @property WebsiteLanguages $WebsiteLanguages
  * @property LookupContactReasons $LookupContactReasons
  * @property LookupCountries $LookupCountries
+ * @property WebsiteLanguages $WebsiteLanguages
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -123,10 +123,6 @@ abstract class BaseNewsletter extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('WebsiteLanguages', array(
-             'local' => 'lang_id',
-             'foreign' => 'int'));
-
         $this->hasOne('LookupContactReasons', array(
              'local' => 'reason_id',
              'foreign' => 'id'));
@@ -134,5 +130,9 @@ abstract class BaseNewsletter extends Doctrine_Record
         $this->hasOne('LookupCountries', array(
              'local' => 'country_id',
              'foreign' => 'id'));
+
+        $this->hasOne('WebsiteLanguages', array(
+             'local' => 'lang_id',
+             'foreign' => 'int'));
     }
 }

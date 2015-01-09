@@ -28,7 +28,7 @@ class Product extends CI_Controller {
     }
 
     public function index($id) {
-        if($id){
+        if ($id) {
             $this->data['product'] = ProductsTable::getOne($id);
             $this->data['page_title'] = $this->data['product']['name'];
 
@@ -41,7 +41,7 @@ class Product extends CI_Controller {
         if ($cat_id) {
             $this->data['category'] = ProductCategoriesTable::getOne($cat_id);
             $this->data['cat_products'] = ProductsTable::getAllCategoryProducts($cat_id, TRUE);
-            
+
             $this->data['page_title'] = $this->data['category']['name'];
 
             $this->template->write_view('content', 'frontend/product_category', $this->data);
@@ -49,6 +49,15 @@ class Product extends CI_Controller {
         } else {
             redirect('/');
         }
+    }
+
+    public function new_products() {
+        $this->data['new_products'] = ProductsTable::getNewProducts();
+
+        $this->data['page_title'] = lang('frontend_new_products');
+
+        $this->template->write_view('content', 'frontend/new_products', $this->data);
+        $this->template->render();
     }
 
 }

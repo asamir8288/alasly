@@ -23,6 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('Products', 'default');
  * @property timestamp $updated_at
  * @property integer $is_active
  * @property integer $deleted
+ * @property integer $is_new
  * @property ProductCategories $ProductCategories
  * @property Doctrine_Collection $ProductImages
  * 
@@ -176,6 +177,16 @@ abstract class BaseProducts extends Doctrine_Record
              'primary' => false,
              'default' => '0',
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('is_new', 'integer', 1, array(
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '0',
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

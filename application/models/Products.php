@@ -22,6 +22,10 @@ class Products extends BaseProducts {
             if (isset($data['is_active'])) {
                 $is_active = TRUE;
             }
+            $is_new = FALSE;
+            if (isset($data['is_new'])) {
+                $is_new = TRUE;
+            }
 
             $pc = new Products();
             $pc->cat_id = $data['cat_id'];
@@ -36,6 +40,7 @@ class Products extends BaseProducts {
             $pc->container_hc = $data['container_hc'];
             $pc->main_image = $errors['p_image'];
             $pc->is_active = $is_active;
+            $pc->is_new = $is_new;
             $pc->created_at = date('ymdHis');
             $pc->save();
 
@@ -52,6 +57,10 @@ class Products extends BaseProducts {
             if (isset($data['is_active'])) {
                 $is_active = TRUE;
             }
+            $is_new = FALSE;
+            if (isset($data['is_new'])) {
+                $is_new = TRUE;
+            }
 
             Doctrine_Query::create()
                     ->update('Products pc')
@@ -67,6 +76,7 @@ class Products extends BaseProducts {
                     ->set('pc.container_hc', '?', $data['container_hc'])
                     ->set('pc.main_image', '?', $errors['p_image'])
                     ->set('pc.is_active', '?', $is_active)
+                    ->set('pc.is_new', '?', $is_new)
                     ->set('pc.updated_at', '?', date('ymdHis'))
                     ->where('pc.id =?', $data['id'])
                     ->execute();

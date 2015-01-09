@@ -59,7 +59,7 @@ class Product extends My_Controller {
                 $this->session->set_flashdata('message', array('type' => 'success',
                     'body' => ($id) ? lang('admin_product_updated_message') : lang('admin_product_added_message'))
                 );
-                redirect('admin/product/add_edit_product');
+                redirect('admin/product');
             }
         } else {
             $this->template->write_view('content', 'backend/products/add_edit_product_view', $this->data);
