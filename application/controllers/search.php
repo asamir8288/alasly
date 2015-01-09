@@ -34,6 +34,8 @@ class Search extends CI_Controller {
             $this->data['keyword'] = $keyword;
             $this->data['results'] = ProductsTable::searchProducts($keyword, $this->data['lang_id']);
             
+            $this->data['page_title'] = lang('frontend_search_results');
+            
             $this->template->write_view('content', 'frontend/search_results', $this->data);
             $this->template->render();
         }else{
