@@ -34,8 +34,12 @@ class Contact extends CI_Controller {
             $_POST['lang_id'] = $this->data['lang_id'];
             $n = new Newsletter();
             $n->addContact($_POST);
-            
+
             $this->sendEmail($_POST);
+
+            $this->session->set_flashdata('message', array('type' => 'success',
+                'body' => 'Your message has been sent successfully!')
+            );
 
             redirect('contact');
         }
@@ -46,6 +50,7 @@ class Contact extends CI_Controller {
         $this->data['countries'] = LookupCountriesTable::getAllCountries();
         $this->data['reasons'] = LookupContactReasonsTable::getAllReasons();
 
+        $this->template->add_js('layout/js/jquery.validate.js');
         $this->template->write_view('content', 'frontend/contact_form', $this->data);
         $this->template->render();
     }
@@ -56,8 +61,12 @@ class Contact extends CI_Controller {
             $_POST['reason_id'] = 6;
             $n = new Newsletter();
             $n->addContact($_POST);
-            
+
             $this->sendEmail($_POST);
+
+            $this->session->set_flashdata('message', array('type' => 'success',
+                'body' => 'Your message has been sent successfully!')
+            );
 
             redirect('contact/export');
         }
@@ -66,6 +75,7 @@ class Contact extends CI_Controller {
         $this->data['countries'] = LookupCountriesTable::getAllCountries();
         $this->data['reasons'] = LookupContactReasonsTable::getAllReasons();
 
+        $this->template->add_js('layout/js/jquery.validate.js');
         $this->template->write_view('content', 'frontend/export_form', $this->data);
         $this->template->render();
     }
@@ -80,7 +90,7 @@ class Contact extends CI_Controller {
         $body .= '<p>' . lang('contact_company') . ': ' . $data['company'] . '</p>';
         $body .= '<p>' . lang('contact_country') . ': ' . $country . '</p>';
         $body .= '<p>' . lang('contact_reasons') . ': ' . $reason . '</p>';
-        send_email('ahmed@dominosmedia.com', $reason, $body);
+        send_email('jobs@elrashidy.com', $reason, $body);
     }
 
 }

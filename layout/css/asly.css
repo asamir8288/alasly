@@ -192,14 +192,14 @@ body{
 }
 
 .right-section .home-about-us{
-    background-image: url(../images/home-about-bg.png);
+    background-image: url(../images/home-about-bg1.png);
     background-repeat: no-repeat;
-    width: 655px;
-    height: 131px;
+    width: 705px;
+    height: 141px;
     display: block;
     float: left;
     position: absolute;
-    margin-top: -23px;
+    margin-top: -32px;
 }
 .right-section .home-about-us .about-us-text {
     font-size: 12px;
@@ -634,3 +634,27 @@ select {
     float: right;
     margin-top: 20px;
 } 
+
+.btn-alignment{
+    margin-left: 148px!important;
+}
+
+label.error{
+    color: #FF0000;
+    display: inline-block;
+    width: 350px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.required_star{
+    color: #FF0000;
+}
+
+.success{
+    border: 1px solid #139f00;
+    background-color: #85e378;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

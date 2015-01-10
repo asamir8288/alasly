@@ -35,10 +35,10 @@ class Career extends CI_Controller {
 
     public function details($job_id) {
         if ($job_id) {
-            $this->data['job'] = OpportunitesTable::getOne($job_id);           
+            $this->data['job'] = OpportunitesTable::getOne($job_id);
             $this->data['page_title'] = $this->data['job']['job_title'];
             $this->data['inside_banner'] = 'we-are-hiring-banner_1.png';
-            
+
             $this->template->write_view('content', 'frontend/job_preview', $this->data);
             $this->template->render();
         } else {
@@ -75,6 +75,54 @@ class Career extends CI_Controller {
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
 
         return $this->data;
+    }
+
+    public function application($job_id = '') {
+        if ($this->input->post('submit')) {
+
+            $upload_data = upload_file('cvs', array('doc|docx|pdf'), '2028');
+            if ($upload_data['error_flag']) {
+                $errors['image'] = $upload_data['errors'];
+                $error_flag = true;
+            } else {
+
+                $_POST['cv_file'] = $upload_data['upload_data']['file_name'];
+                $app = new Profiles();
+                $application_id = $app->addApplication($_POST);
+
+                if ($job_id) {
+                    $uo = new UsersOpportunities();
+                    $uo->addApplication($application_id, $job_id);
+
+                    $this->session->set_flashdata('message', array('type' => 'success',
+                        'body' => 'Your have application on ' . OpportunitesTable::getJobTitle($job_id) . ' has been created successfully!')
+                    );
+                } else {
+                    $this->session->set_flashdata('message', array('type' => 'success',
+                        'body' => 'Your resume has been added successfully to our database!')
+                    );
+                }
+
+                redirect('career');
+            }
+        }
+
+        $this->data['page_title'] = lang('available_jobs');
+        $this->data['inside_banner'] = 'we-are-hiring-banner_1.png';
+
+        if ($job_id) {
+            $this->data['submit_url'] = 'career/application/' . $job_id;
+            $this->data['job_title'] = lang('job_title') . OpportunitesTable::getJobTitle($job_id);
+        } else {
+            $this->data['submit_url'] = 'career/application';
+            $this->data['job_title'] = '';
+        }
+
+        $this->data['countries'] = LookupCountriesTable::getAllCountries();
+
+        $this->template->add_js('layout/js/jquery.validate.js');
+        $this->template->write_view('content', 'frontend/apply_form', $this->data);
+        $this->template->render();
     }
 
 }

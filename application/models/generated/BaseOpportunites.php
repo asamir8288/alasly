@@ -31,6 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('Opportunites', 'default');
  * @property LookupCountries $LookupCountries
  * @property LookupIndustries $LookupIndustries
  * @property LookupJobRoles $LookupJobRoles
+ * @property Doctrine_Collection $UsersOpportunities
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -204,7 +205,7 @@ abstract class BaseOpportunites extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'default' => '1',
+             'default' => '0',
              'notnull' => false,
              'autoincrement' => false,
              ));
@@ -238,5 +239,9 @@ abstract class BaseOpportunites extends Doctrine_Record
         $this->hasOne('LookupJobRoles', array(
              'local' => 'job_role_id',
              'foreign' => 'id'));
+
+        $this->hasMany('UsersOpportunities', array(
+             'local' => 'id',
+             'foreign' => 'opportunity_id'));
     }
 }

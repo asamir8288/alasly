@@ -16,7 +16,7 @@
 <div class="right_bottom">
     <div class="home-about-us">
         <p class="about-us-text">
-            At Al Asly, we are dedicated to bringing more to the table for our consumers, employees, shareholders and the communities in which we operate. Our mission is founded in a commitment to our heritage of integrity, innovation, philanthropy, and stewardship. Based in Egypt, Al Asly is a local manufacturer and marketer of high-quality, sesame based products for consumers. 
+            <?php echo lang('about_semseme_home');?>
         </p>
     </div>
     <div class="socials">

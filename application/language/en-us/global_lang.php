@@ -67,4 +67,10 @@ $lang['frontend_new_products'] = 'New Products';
 $lang['frontend_list_new_products'] = 'List of New Products';
 $lang['frontend_search_results'] = 'Search';
 
+$lang['about_semseme_home'] = 'Sesame is a flowering plant. It is widely naturalized in tropical regions around the world and is cultivated for its edible seeds, which grow in pods. Sesame seed is one of the oldest oilseed crops known, domesticated well over 3000 years ago. It was a major summer crop in the Middle East for thousands of years, as attested to by the discovery of many ancient presses for sesame oil in the region. Sesame is drought-tolerant and is able to grow where other crops fail. Sesame has one of the highest oil contents of any seed. With a rich nutty flavor, it is a common ingredient in cuisines across the world.';
+
+$lang['position'] = 'Position';
+$lang['city'] = 'City';
+$lang['cv_file'] = 'Resume';
+$lang['job_title'] = 'Job Title: ';
 ?>

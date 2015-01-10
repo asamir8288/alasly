@@ -51,7 +51,7 @@
         <li>
             <span>Keywords</span><?php echo $job['keywords'];?>
         </li> 
-        <a href="" class="apply-now">apply now</a>                      
+        <a href="<?php echo site_url('career/application/' . $job['id']);?>" class="apply-now">apply now</a>                      
     </ul>
 </div>
 

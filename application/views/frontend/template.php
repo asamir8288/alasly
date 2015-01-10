@@ -18,7 +18,7 @@
                     <a href="<?php echo base_url(); ?>" class="logo"></a>
 
                     <div class="search">
-                        <form method="post" action="<?php echo base_url();?>search/index">
+                        <form method="post" action="<?php echo base_url(); ?>search/index">
                             <input type="text" placeholder="Search" class="search-box" name="search" />
                             <input type="submit" name="submit" value="" class="search-btn" />
                         </form>
@@ -132,7 +132,8 @@
 
                     </ul>                
                 </div>
-                <div class="<?php echo isset($is_homepage) ? 'right-section' : 'inside-right-section'; ?>">
+                <div class="<?php echo isset($is_homepage) ? 'right-section' : 'inside-right-section'; ?>">                    
+
                     <?php echo $content; ?>                           
                 </div>
             </div>
