@@ -629,11 +629,19 @@ select {
 }
 
 .see_related_products{
-    color: #a5080c;
+    /*color: #a5080c;*/
     font-size: 15px;
     float: right;
     margin-top: 20px;
+    background-color: #ad1215;
+    padding: 10px;
+    color: #FFF;
+    right: 10px;
+    position: relative;
 } 
+.see_related_products:hover{
+    text-decoration: none;
+}
 
 .btn-alignment{
     margin-left: 148px!important;

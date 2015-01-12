@@ -3,11 +3,13 @@
 </div> 
 
 <div class="internal">
+    <a href="<?php echo site_url('product/list_products/'. $category['id']);?>" class="see_related_products"><?php echo sprintf(lang('frontend_see_related_product'), $category['name']);?></a>
+
+    <div style="clear: both;height: 1px;"></div>
+    
     <div class="title"><?php echo $category['name']; ?></div>
     <?php echo $category['description']; ?>
     
-    <a href="<?php echo site_url('product/list_products/'. $category['id']);?>" class="see_related_products"><?php echo sprintf(lang('frontend_see_related_product'), $category['name']);?></a>
-
-    <div style="clear: both;height: 10px;"></div>
+    
     
 </div>
