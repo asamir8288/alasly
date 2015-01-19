@@ -13,12 +13,12 @@
                 company: "required",
             },
             messages: {
-                name: "Please enter your name",
-                email: "Please enter a valid email address",
-                phone: "Please enter you phone number",
-                message: "Please enter your message",
-                country_id: "Please select your country",
-                company: "Please enter your company name",
+                name: "<?php echo lang('error_name');?>",
+                email: "<?php echo lang('error_address');?>",
+                phone: "<?php echo lang('error_phone');?>",
+                message: "<?php echo lang('error_message');?>",
+                country_id: "<?php echo lang('error_country');?>",
+                company: "<?php echo lang('error_company');?>",
             }
         });
     });

@@ -26,11 +26,12 @@ class OpportunitesTable extends Doctrine_Table
                 ->fetchOne();
     }
     
-    public static function getOpportunities($active = FALSE) {
+    public static function getOpportunities($active = FALSE, $lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('o.*, c.*, r.*')
                 ->from('Opportunites o, o.LookupCountries c, o.LookupJobRoles r')
-                ->where('o.deleted=0');
+                ->where('o.deleted=0')
+                ->andWhere('o.lang_id =?', $lang_id);
         if($active){
                 $q = $q->andWhere('o.is_active=?', TRUE);
         }

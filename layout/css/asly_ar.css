@@ -193,20 +193,21 @@ body{
 }
 
 .right-section .home-about-us{
-    background-image: url(../images/home-about-bg1.png);
+    background-image: url(../images/home-about-bg_ar.png);
     background-repeat: no-repeat;
     width: 705px;
     height: 141px;
     display: block;
     float: left;
     position: absolute;
-    margin-top: -32px;
+    margin-top: -33px;
+    margin-right: -1px;
 }
 .right-section .home-about-us .about-us-text {
     font-size: 12px;
-    margin-left: 183px;
+    margin-right: 183px;
     margin-top: 25px;
-    margin-right: 10px;
+    margin-left: 10px;
     color: #FFF;
 }
 
@@ -224,8 +225,8 @@ body{
 
 .inside-right-section .job-details {
     width: 600px;
-    margin-left: 40px;
-    float: left;
+    margin-right: 40px;
+    float: right;
     margin-top: 30px;
 }
 .inside-right-section .job-details .job-title{
@@ -261,7 +262,7 @@ body{
     margin-top: 20px;
 }
 .section-title.summary{
-    margin-left: 20px;	
+    margin-right: 40px;	
 }
 .section-title span{
     font-size: 21px;
@@ -296,7 +297,7 @@ body{
 
 
 .inside-right-section .job-summary {
-    margin-left: 40px;
+    margin-right: 40px;
     width: 255px;
     -webkit-box-shadow: 1px 1px 15px 1px #808080;
     -moz-box-shadow: 1px 1px 15px 1px #808080;
@@ -304,7 +305,7 @@ body{
     min-height: 300px;
     display: block;
     background-color: #FFF;
-    float: left;
+    float: right;
     margin-top: 30px;
 }
 .inside-right-section .job-summary ul {
@@ -321,7 +322,7 @@ body{
     display: block;
     color: #1c1c1c;
     font-size: 13px;	
-    font-family: 'open_sansbold';
+    font-weight: bold;
 }
 .apply-now {
     background-color: #a5080c;
@@ -648,15 +649,15 @@ select {
 }
 
 .btn-alignment{
-    margin-left: 148px!important;
+    margin-right: 125px!important;
 }
 
 label.error{
     color: #FF0000;
     display: inline-block;
     width: 350px;
-    text-align: left;
-    margin-left: 10px;
+    text-align: right;
+    margin-right: 10px;
 }
 
 .required_star{

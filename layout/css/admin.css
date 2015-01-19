@@ -236,6 +236,13 @@ and open the template in the editor.
     top: 5px;
     right: 5px;
 }
+.delete-lnk{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    font-size: 13px;
+    color: #FFF;
+}
 
 .inside-menu-bg{
     background-color: #e4e5e7;

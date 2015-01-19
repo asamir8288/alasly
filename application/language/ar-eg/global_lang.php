@@ -77,4 +77,29 @@ $lang['position'] = 'المنصب';
 $lang['city'] = 'المدينة';
 $lang['cv_file'] = 'السيرة الذاتية';
 $lang['job_title'] = 'المسمي الوظيفي: ';
+
+$lang['el_asly'] = 'الأصلي';
+$lang['job_posted_date'] = 'تاريخ النشر';
+$lang['about_the_job'] = '<span>عن</span> الوظيفة';
+$lang['keywords'] = 'الكلمات المهمة';
+$lang['job_description'] = '<span>وصف</span> الوظيفة';
+$lang['job_summary'] = '<span>ملخص</span> الوظيفة';
+$lang['location'] = 'العنوان';
+$lang['industry'] = 'مجال العمل';
+$lang['job_role'] = 'الدور الوظيفي';
+$lang['years_of_experience'] = 'سنين الخبرة';
+$lang['salary'] = 'المرتب';
+$lang['career_level'] = 'الكادر الوظيفي';
+$lang['no_vacancies'] = 'عدد الفرص المتاحة';
+$lang['apply_now'] = 'قدم الآن';
+
+$lang['error_name'] = 'من فضلك أدخل الاسم';
+$lang['error_address'] = 'من فضلك أدخل العنوان';
+$lang['error_position'] = 'من فضلك أدخل المسمى الوظيفي';
+$lang['error_country'] = 'من فضلك أدخل اختر البلد';
+$lang['error_resume'] = 'من فضلك أدخل سيرتك الذاتية';
+$lang['error_phone'] = 'من فضلك أدخل رقم الهاتف';
+$lang['error_message'] = 'من فضلك أدخل رسالتك';
+$lang['error_company'] = 'من فضلك أدخل اسم الشركة';
+$lang['error_reason'] = 'من فضلك أختر السبب';
 ?>

@@ -11,6 +11,7 @@ Doctrine_Manager::getInstance()->bindComponent('WebsiteLanguages', 'default');
  * @property string $name
  * @property Doctrine_Collection $Banners
  * @property Doctrine_Collection $Newsletter
+ * @property Doctrine_Collection $Opportunites
  * @property Doctrine_Collection $ProductCategories
  * @property Doctrine_Collection $StaticPages
  * 
@@ -51,6 +52,10 @@ abstract class BaseWebsiteLanguages extends Doctrine_Record
              'foreign' => 'lang_id'));
 
         $this->hasMany('Newsletter', array(
+             'local' => 'int',
+             'foreign' => 'lang_id'));
+
+        $this->hasMany('Opportunites', array(
              'local' => 'int',
              'foreign' => 'lang_id'));
 

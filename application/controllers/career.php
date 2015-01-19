@@ -28,7 +28,7 @@ class Career extends CI_Controller {
     public function index() {
         $this->data['page_title'] = lang('available_jobs');
         $this->data['inside_banner'] = 'we-are-hiring-banner_1.png';
-        $this->data['jobs'] = OpportunitesTable::getOpportunities(TRUE);
+        $this->data['jobs'] = OpportunitesTable::getOpportunities(TRUE, $this->data['lang_id']);
         $this->template->write_view('content', 'frontend/available_jobs', $this->data);
         $this->template->render();
     }

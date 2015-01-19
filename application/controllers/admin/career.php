@@ -34,15 +34,15 @@ class Career extends My_Controller {
 
     public function available_jobs() {
         $this->data['page_title'] = lang('list_of_available_jobs');
-        
+
         $this->data['inside_sub_menu'] = 'career_lnks';
 
-        $this->data['jobs'] = OpportunitesTable::getOpportunities();
+        $this->data['jobs'] = OpportunitesTable::getOpportunities(FALSE, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/list_all_jobs', $this->data);
         $this->template->render();
     }
-    
+
     public function switch_status($job_id) {
         if ($job_id) {
             $o = new Opportunites();
@@ -51,12 +51,12 @@ class Career extends My_Controller {
             redirect('admin/career/available_jobs');
         }
     }
-    
-    public function delete_job($job_id){
-        if($job_id){
+
+    public function delete_job($job_id) {
+        if ($job_id) {
             $o = new Opportunites();
             $o->deleteJob($job_id);
-            
+
             redirect('admin/career/available_jobs');
         }
     }
@@ -69,6 +69,7 @@ class Career extends My_Controller {
                 $_POST['id'] = $job_id;
                 $o->updatePost($_POST);
             } else {
+                $_POST['lang_id'] = $this->data['lang_id'];
                 $o->addPost($_POST);
             }
 
@@ -110,7 +111,7 @@ class Career extends My_Controller {
         $this->data['post_url'] = 'admin/career/mission';
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('career_mission');
-        
+
         $this->data['inside_sub_menu'] = 'career_lnks';
 
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
@@ -134,7 +135,7 @@ class Career extends My_Controller {
         $this->data['post_url'] = 'admin/career/why_alasly';
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('career_why_alasly');
-        
+
         $this->data['inside_sub_menu'] = 'career_lnks';
 
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);
@@ -158,7 +159,7 @@ class Career extends My_Controller {
         $this->data['post_url'] = 'admin/career/our_workplace';
         $this->data['submit_btn'] = lang('update');
         $this->data['page_title'] = lang('page_main_title') . lang('career_our_workplace');
-        
+
         $this->data['inside_sub_menu'] = 'career_lnks';
 
         $this->data['data'] = StaticPagesTable::getOne($page_id, $this->data['lang_id']);

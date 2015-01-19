@@ -26,6 +26,7 @@
         <?php } else { ?>
             <a class="active-deactivate-lnk" href="<?php echo base_url() . 'admin/banner/change_status/' . $banner['id']; ?>"><img title="Inactive Job" src="<?php echo static_url(); ?>layout/images/inactive.png" /></a>
         <?php } ?>
+            <a class="delete-lnk" href="<?php echo base_url() . 'admin/banner/delete_banner/' . $banner['id']; ?>">Delete</a>
         <img style="width: 300px;" src="<?php echo static_url() . 'files/banners/' . $banner['banner_file']; ?>" />
 
         <a href="<?php echo site_url('admin/banner/delete_banner/' . $banner['id']); ?>"><?php echo lang('banner_delete'); ?></a>

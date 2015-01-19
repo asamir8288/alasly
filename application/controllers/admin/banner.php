@@ -35,5 +35,12 @@ class Banner extends My_Controller {
         $this->template->write_view('content', 'backend/banners', $this->data);
         $this->template->render();
     }
+    
+    public function delete_banner($id) {
+        $b = new Banners();
+        $b->deleteBanner($id);
+        
+        redirect('admin/banner');
+    }
 
 }

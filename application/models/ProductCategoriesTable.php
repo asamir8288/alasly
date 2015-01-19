@@ -29,7 +29,8 @@ class ProductCategoriesTable extends Doctrine_Table {
         $q = Doctrine_Query::create()
                 ->select('pc.*')
                 ->from('ProductCategories pc')
-                ->where('pc.lang_id =?', $lang_id);
+                ->where('pc.lang_id =?', $lang_id)
+                ->andwhere('pc.deleted =0');
         if ($active) {
             $q = $q->andWhere('pc.is_active=?', TRUE);
         }

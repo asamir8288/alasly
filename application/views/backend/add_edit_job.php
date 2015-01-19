@@ -9,7 +9,7 @@
         <label for="job_country"><?php echo lang('job_country');?></label>
         <select name="country_id" class="compo-box">
             <?php foreach($countries as $country) { ?>
-                <option <?php echo (isset($data['country_id']) && $data['country_id'] == $country['id']) ? 'selected' : '';?> value="<?php echo $country['id'];?>"><?php echo ($lang_id == 1) ? $country['name'] : $country['ar_name'];?></option>
+                <option <?php echo (isset($data['country_id']) && $data['country_id'] == $country['id']) ? 'selected' : '';?> value="<?php echo $country['id'];?>"><?php echo ($lang_id == 1) ? $country['name'] : $country['name'];?></option>
             <?php } ?>
         </select>
     </li>
@@ -21,7 +21,7 @@
         <label for="job_career_level"><?php echo lang('job_career_level');?></label>
         <select name="career_level_id" class="compo-box">
             <?php foreach($careerLevels as $c_level) { ?>
-                <option <?php echo (isset($data['career_level_id']) && $data['career_level_id'] == $c_level['id']) ? 'selected' : '';?> value="<?php echo $c_level['id'];?>"><?php echo ($lang_id == 1) ? $c_level['name'] : $c_level['ar_name'];?></option>
+                <option <?php echo (isset($data['career_level_id']) && $data['career_level_id'] == $c_level['id']) ? 'selected' : '';?> value="<?php echo $c_level['id'];?>"><?php echo ($lang_id == 1) ? $c_level['name'] : $c_level['name'];?></option>
             <?php } ?>
         </select>
     </li>
@@ -29,7 +29,7 @@
         <label for="job_industry"><?php echo lang('job_industry');?></label>
         <select name="industry_id" class="compo-box">
             <?php foreach($industries as $industry) { ?>
-                <option <?php echo (isset($data['industry_id']) && $data['industry_id'] == $industry['id']) ? 'selected' : '';?> value="<?php echo $industry['id']?>"><?php echo ($lang_id == 1) ? $industry['name'] : $industry['ar_name'];?></option>
+                <option <?php echo (isset($data['industry_id']) && $data['industry_id'] == $industry['id']) ? 'selected' : '';?> value="<?php echo $industry['id']?>"><?php echo ($lang_id == 1) ? $industry['name'] : $industry['name'];?></option>
             <?php } ?>
         </select>
     </li>
@@ -37,7 +37,7 @@
         <label for="job_role_id"><?php echo lang('job_role');?></label>
         <select name="job_role_id" class="compo-box">
             <?php foreach($jobRoles as $role) { ?>
-                <option <?php echo (isset($data['job_role_id']) && $data['job_role_id'] == $role['id']) ? 'selected' : '';?> value="<?php echo $role['id'];?>"><?php echo ($lang_id == 1) ? $role['name'] : $role['ar_name'];?></option>
+                <option <?php echo (isset($data['job_role_id']) && $data['job_role_id'] == $role['id']) ? 'selected' : '';?> value="<?php echo $role['id'];?>"><?php echo ($lang_id == 1) ? $role['name'] : $role['name'];?></option>
             <?php } ?>
         </select>
     </li>

@@ -24,6 +24,7 @@ class Opportunites extends BaseOpportunites {
             }
 
             $o = new Opportunites();
+            $o->lang_id = $data['lang_id'];
             $o->country_id = $data['country_id'];
             $o->city = $data['city'];
             $o->career_level_id = $data['career_level_id'];

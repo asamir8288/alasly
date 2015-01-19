@@ -271,3 +271,18 @@ and open the template in the editor.
     margin-right: 153px!important;
     font-weight: bold;
 }
+
+.delete-lnk{
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    font-size: 13px;
+    color: #FFF;
+}
+
+.cke_skin_kama {    
+    left: 0px!important;
+    right: 155px;
+    position: relative;
+    top: -17px;
+}

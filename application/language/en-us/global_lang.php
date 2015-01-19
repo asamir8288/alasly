@@ -73,4 +73,30 @@ $lang['position'] = 'Position';
 $lang['city'] = 'City';
 $lang['cv_file'] = 'Resume';
 $lang['job_title'] = 'Job Title: ';
+
+$lang['el_asly'] = 'Al Asly';
+$lang['job_posted_date'] = 'Date Posted';
+$lang['about_the_job'] = '<span>ABOUT</span> THE JOB';
+$lang['keywords'] = 'Keywords';
+$lang['job_description'] = '<span>Job</span> Description';
+$lang['job_summary'] = '<span>JOB</span> SUMMARY';
+$lang['location'] = 'Location';
+$lang['industry'] = 'Industry';
+$lang['job_role'] = 'Job Role';
+$lang['years_of_experience'] = 'Years of Experience';
+$lang['salary'] = 'Salary';
+$lang['career_level'] = 'Career Level';
+$lang['no_vacancies'] = 'Number of Vacancies';
+$lang['apply_now'] = 'Apply Now';
+
+
+$lang['error_name'] = 'Please enter your name';
+$lang['error_address'] = 'Please enter a valid email address';
+$lang['error_position'] = 'Please enter your current position';
+$lang['error_country'] = 'Please select your country';
+$lang['error_resume'] = 'Please select your resume';
+$lang['error_phone'] = 'Please enter you phone number';
+$lang['error_message'] = 'Please enter your message';
+$lang['error_company'] = 'Please enter your company name';
+$lang['error_reason'] = 'Please select your reason';
 ?>

@@ -12,11 +12,11 @@
                 userfile: "required",
             },
             messages: {
-                name: "Please enter your name",                
-                email: "Please enter a valid email address",
-                position: "Please enter your current position",
-                country_id: "Please select your country",
-                userfile: "Please select your resume",
+                name: "<?php echo lang('error_name');?>",                
+                email: "<?php echo lang('error_address');?>",
+                position: "<?php echo lang('error_position');?>",
+                country_id: "<?php echo lang('error_country');?>",
+                userfile: "<?php echo lang('error_resume');?>",
             }
         });
     });
