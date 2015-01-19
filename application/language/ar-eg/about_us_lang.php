@@ -11,3 +11,8 @@ $lang['profile_page_title'] = 'نبذة عنا';
 $lang['mission_page_title'] = 'الرسالة والقيم';
 $lang['innovation_page_title'] = 'الابداع هو دافعنا للنجاح';
 $lang['foods_story_page_title'] = 'تاريخ الاصلي';
+
+$lang['profile'] = 'نبذة عنا';
+$lang['mission'] = 'الرسالة والقيم';
+$lang['innovation'] = 'الابداع';
+$lang['foods_story'] = 'تاريخ الاصلي';

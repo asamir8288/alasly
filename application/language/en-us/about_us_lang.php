@@ -11,3 +11,8 @@ $lang['profile_page_title'] = 'Profile';
 $lang['mission_page_title'] = 'Mission & Values';
 $lang['innovation_page_title'] = 'Innovation Drives Our Success';
 $lang['foods_story_page_title'] = 'Al Asly Foods Story';
+
+$lang['profile'] = 'Profile';
+$lang['mission'] = 'Mission';
+$lang['innovation'] = 'Innovation';
+$lang['foods_story'] = 'Foods Story';
