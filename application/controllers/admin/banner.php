@@ -31,7 +31,7 @@ class Banner extends My_Controller {
         $this->data['post_url'] = 'admin/banner/index';
         $this->data['submit_btn'] = lang('admin_add_banner');
 
-        $this->data['activeBanners'] = BannersTable::getActiveBanners();
+        $this->data['activeBanners'] = BannersTable::getActiveBanners(FALSE, 'DESC', $this->data['lang_id']);
         $this->template->write_view('content', 'backend/banners', $this->data);
         $this->template->render();
     }

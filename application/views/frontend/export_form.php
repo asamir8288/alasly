@@ -74,7 +74,7 @@
             <textarea name="message" class="txtearia"></textarea>
         </li>
         <li>
-            <?php echo form_submit('submit', ' ', 'class="send-btn"'); ?>
+            <?php echo form_submit('submit', lang('contact_send_btn'), 'class="send-btn"'); ?>
         </li>
     </ul>
     <?php echo form_close(); ?>

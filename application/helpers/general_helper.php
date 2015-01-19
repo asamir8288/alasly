@@ -69,9 +69,9 @@ function productMenu() {
     return $html;
 }
 
-function newProducts() {
+function newProducts($lang_id = 1) {
     $html = '';
-    if (ProductsTable::getCountNewProducts() > 0) {
+    if (ProductsTable::getCountNewProducts($lang_id) > 0) {
         $html = '<li>';
         $html .= '<a href="' . site_url('product/new_products') . '">';
         $html .= '<img src="' . base_url() . 'layout/images/menu-about-icon.png" />';

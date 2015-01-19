@@ -41,24 +41,26 @@ class ProductsTable extends Doctrine_Table
         return $q;
     }
     
-    public static function getCountNewProducts() {
+    public static function getCountNewProducts($lang_id = 1) {
         $q = Doctrine_Query::create()
                 ->select('COUNT(p.id) AS new_products')
-                ->from('Products p')
+                ->from('Products p, p.ProductCategories pc')
                 ->where('p.is_new =1')
                 ->andWhere('p.deleted =0')
+                ->andWhere('pc.lang_id =?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_SCALAR)
                 ->fetchOne();
         
         return $q['p_new_products'];
     }
     
-    public static function getNewProducts() {
+    public static function getNewProducts($lang_id = 1) {
         return Doctrine_Query::create()
                 ->select('p.*, pc.*')
                 ->from('Products p, p.ProductCategories pc')
                 ->where('p.is_new =1')
                 ->andWhere('p.deleted =0')
+                ->andWhere('pc.lang_id =?', $lang_id)
                 ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
                 ->execute();
     }

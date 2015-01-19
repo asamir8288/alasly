@@ -66,7 +66,7 @@ class Product extends CI_Controller {
     }
 
     public function new_products() {
-        $this->data['new_products'] = ProductsTable::getNewProducts();
+        $this->data['new_products'] = ProductsTable::getNewProducts($this->data['lang_id']);
 
         $this->data['page_title'] = lang('frontend_new_products');
 

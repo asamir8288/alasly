@@ -13,12 +13,12 @@
             <div class="separator"></div>
 
             <ul>
-                <li>Type:<span><?php echo $product['product_type'];?></span></li>
-                <li>Weight:<span><?php echo $product['weight'];?></span></li>
-                <li>Pack:<span><?php echo $product['pack'];?></span></li>
-                <li>Container 20:<span><?php echo $product['container_20'];?></span></li>
-                <li>Container 40:<span><?php echo $product['container_40'];?></span></li>
-                <li>Container HC:<span><?php echo $product['container_hc'];?></span></li>
+                <li><?php echo lang('admin_form_type');?>:<span><?php echo $product['product_type'];?></span></li>
+                <li><?php echo lang('admin_form_weight');?>:<span><?php echo $product['weight'];?></span></li>
+                <li><?php echo lang('admin_form_pack');?>:<span><?php echo $product['pack'];?></span></li>
+                <li><?php echo lang('admin_form_container_20');?>:<span><?php echo $product['container_20'];?></span></li>
+                <li><?php echo lang('admin_form_container_40');?>:<span><?php echo $product['container_40'];?></span></li>
+                <li><?php echo lang('admin_form_container_hc');?>:<span><?php echo $product['container_hc'];?></span></li>
             </ul>
         </div>
     </div>

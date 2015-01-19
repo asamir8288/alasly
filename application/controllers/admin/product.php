@@ -19,7 +19,7 @@ class Product extends My_Controller {
 
     public function index() {
         $this->data['page_title'] = lang('admin_list_categories');
-        $this->data['categories'] = ProductCategoriesTable::getAllCategories();
+        $this->data['categories'] = ProductCategoriesTable::getAllCategories(FALSE, $this->data['lang_id']);
 
         $this->template->write_view('content', 'backend/products/list_all_categories', $this->data);
         $this->template->render();
@@ -27,7 +27,7 @@ class Product extends My_Controller {
     
     public function add_edit_product($id = ''){
         $this->data['page_title'] = lang('page_main_title') . lang('product_page_title');
-        $this->data['categories'] = ProductCategoriesTable::getAllCategories();
+        $this->data['categories'] = ProductCategoriesTable::getAllCategories(FALSE, $this->data['lang_id']);
         if ($id) {
             $this->data['data'] = ProductsTable::getOne($id);
             $this->data['post_url'] = 'admin/product/add_edit_product/' . $id;

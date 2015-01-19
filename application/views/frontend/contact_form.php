@@ -54,7 +54,7 @@
 
     <div class="title"><?php echo lang('contact_page_title'); ?></div>
 
-    <div style="float: left;width: 540px;">
+    <div class="contact-us-form">
         <?php echo form_open('contact/index', 'id="contact_form"'); ?>
         <ul class="contact-form">
             <li>
@@ -96,13 +96,13 @@
                 <textarea name="message" class="txtearia"></textarea>
             </li>
             <li>
-                <?php echo form_submit('submit', ' ', 'class="send-btn"'); ?>
+                <?php echo form_submit('submit', lang('contact_send_btn'), 'class="send-btn"'); ?>
             </li>
         </ul>
         <?php echo form_close(); ?>
     </div>
 
-    <div style="float: left;width: 350px;">
+    <div class="contact-us-address">
         <?php echo $data['description']; ?>
     </div>
 </div>

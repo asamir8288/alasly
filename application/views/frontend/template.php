@@ -3,11 +3,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title><?php echo (isset($page_title)) ? $page_title : ''; ?></title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/asly.css"/>
+        <?php
+        $lang_code = $this->session->userdata('lang_code');
+
+        if ($lang_code == 'en-us') {
+            ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/asly.css"/>
+        <?php } else { ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>layout/css/asly_ar.css"/>
+        <?php } ?>
         <?php echo $_styles; ?>
         <script type="text/javascript" src="<?php echo base_url(); ?>layout/js/jquery-1.9.1.min.js"></script>
 
-        <script src="<?php echo base_url(); ?>layout/js/menu.js"></script>
+        <?php
+        if ($lang_code == 'en-us') {
+            ?>
+            <script src="<?php echo base_url(); ?>layout/js/menu.js"></script>
+        <?php } else { ?>
+            <script src="<?php echo base_url(); ?>layout/js/menu_ar.js"></script>
+        <?php } ?>
         <?php echo $_scripts; ?>
     </head>
 
@@ -70,14 +84,14 @@
                             <ul class="submenu" id="products" style="display: none;position: relative;">
 
                                 <li class="submenu_bg">
-                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/2'; ?>">
+                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/' . (($lang_code == 'en-us') ? '2' : '5'); ?>">
                                         <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
                                         <?php echo lang('frontend_product-halawa'); ?>
                                     </a>
                                 </li>
                                 <li class="submenu-separator"></li>
                                 <li class="submenu_bg">
-                                    <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/3'; ?>">
+                                    <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/'. (($lang_code == 'en-us') ? '3' : '6'); ?>">
                                         <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
                                         <?php echo lang('frontend_product-tahina'); ?>
                                     </a>
@@ -128,7 +142,12 @@
                                 <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
                                 <?php echo lang('menu_export'); ?></a></li>
                         <li class="separator"></li>
-                        <?php echo newProducts(); ?>
+                        <?php 
+                        $lang_id = 1;
+                        if ($lang_code != 'en-us') {
+                            $lang_id = 2;
+                        }
+                        echo newProducts($lang_id); ?>
 
                     </ul>                
                 </div>
