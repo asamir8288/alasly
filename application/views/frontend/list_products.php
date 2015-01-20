@@ -15,7 +15,7 @@
                 <tr>
                     <td style="width: 100px;"><a style="text-decoration: none;" href="<?php echo base_url() . 'product/index/' . $prod['id'];?>"><img src="<?php echo base_url() . 'files/products/' . $prod['main_image']; ?>" style="max-width: 100px;max-height: 100px;"></a></td>
                     <td style="width: 100px;text-align: center;"><strong><?php echo $prod['name']; ?></strong></td>
-                    <td style="min-width: 300px;"><?php echo (strlen($prod['description']) > 250) ? substr(strip_tags($prod['description']), 0, 250) . '... <a href="' . base_url() . 'product/index/' . $prod['id'] . '" class="read_more">' . lang('frontend_read_details') . '</a>' : strip_tags($prod['description']); ?></td>
+                    <td style="min-width: 600px;"><?php echo (strlen($prod['description']) > 250) ? substr(strip_tags($prod['description']), 0, 250) . '... <a href="' . base_url() . 'product/index/' . $prod['id'] . '" class="read_more">' . lang('frontend_read_details') . '</a>' : strip_tags($prod['description']); ?></td>
                 </tr>
             <?php } ?>
         </table>
