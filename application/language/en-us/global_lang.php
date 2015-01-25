@@ -46,6 +46,7 @@ $lang['list_of_available_jobs'] = 'Available Jobs';
 $lang['lnk_details'] = 'View Details';
 
 $lang['frontend_product-halawa'] = 'Halawa';
+$lang['frontend_product-halawa-spread'] = 'Halawa Spread';
 $lang['frontend_product-tahina'] = 'Tahina';
 
 $lang['contact_us_admin_title'] = 'Contact Us';

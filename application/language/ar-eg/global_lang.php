@@ -46,6 +46,7 @@ $lang['list_of_available_jobs'] = 'الوظائف المتاحة';
 $lang['lnk_details'] = 'عرض المزيد';
 
 $lang['frontend_product-halawa'] = 'الحلاوة';
+$lang['frontend_product-halawa-spread'] = 'حلاوة سبيريد';
 $lang['frontend_product-tahina'] = 'الطحينة';
 
 $lang['contact_us_admin_title'] = 'اتصل بنا';

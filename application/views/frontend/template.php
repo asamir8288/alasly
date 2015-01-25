@@ -84,9 +84,16 @@
                             <ul class="submenu" id="products" style="display: none;position: relative;">
 
                                 <li class="submenu_bg">
-                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/' . (($lang_code == 'en-us') ? '2' : '5'); ?>">
+                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/' . (($lang_code == 'en-us') ? '1' : '5'); ?>">
                                         <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
                                         <?php echo lang('frontend_product-halawa'); ?>
+                                    </a>
+                                </li>
+                                <li class="submenu-separator"></li>
+                                <li class="submenu_bg">
+                                    <a style="top: 10px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/' . (($lang_code == 'en-us') ? '2' : '5'); ?>">
+                                        <img src="<?php echo base_url() . 'layout/images/halawa-icon.png'; ?>" />
+                                        <?php echo lang('frontend_product-halawa-spread'); ?>
                                     </a>
                                 </li>
                                 <li class="submenu-separator"></li>
