@@ -48,6 +48,8 @@ $lang['lnk_details'] = 'View Details';
 $lang['frontend_product-halawa'] = 'Halawa';
 $lang['frontend_product-halawa-spread'] = 'Halawa Spread';
 $lang['frontend_product-tahina'] = 'Tahina';
+$lang['frontend_product-molasses'] = 'Molasses';
+$lang['frontend_product-confectionery'] = 'Confectionery';
 
 $lang['contact_us_admin_title'] = 'Contact Us';
 $lang['contact_page_title'] = 'Contact Us';

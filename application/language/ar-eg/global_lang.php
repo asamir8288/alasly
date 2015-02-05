@@ -48,6 +48,8 @@ $lang['lnk_details'] = 'عرض المزيد';
 $lang['frontend_product-halawa'] = 'الحلاوة';
 $lang['frontend_product-halawa-spread'] = 'حلاوة سبيريد';
 $lang['frontend_product-tahina'] = 'الطحينة';
+$lang['frontend_product-molasses'] = 'عسل أسود';
+$lang['frontend_product-confectionery'] = 'حلويات';
 
 $lang['contact_us_admin_title'] = 'اتصل بنا';
 $lang['contact_page_title'] = 'اتصل بنا';
