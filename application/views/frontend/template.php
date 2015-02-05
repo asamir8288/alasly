@@ -107,14 +107,14 @@
                                 <li class="submenu_bg">
                                     <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/'. (($lang_code == 'en-us') ? '9' : '6'); ?>">
                                         <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
-                                        <?php echo lang('frontend_product-tahina'); ?>
+                                        <?php echo lang('frontend_product-molasses'); ?>
                                     </a>
                                 </li>   
                                 <li class="submenu-separator"></li>
                                 <li class="submenu_bg">
                                     <a style="top: 5px!important;" class="sub-menu-link" href="<?php echo base_url() . 'product/category/'. (($lang_code == 'en-us') ? '10' : '6'); ?>">
                                         <img src="<?php echo base_url() . 'layout/images/tahina-icon.png'; ?>" />
-                                        <?php echo lang('frontend_product-tahina'); ?>
+                                        <?php echo lang('frontend_product-confectionery'); ?>
                                     </a>
                                 </li>   
 
