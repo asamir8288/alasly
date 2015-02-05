@@ -400,6 +400,7 @@ body{
     position: relative;
     top: 45px;
     max-width: 350px;
+    max-height: 320px;
 }
 .product-details-table .title{
     font-size: 24px;
