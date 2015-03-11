@@ -37,7 +37,7 @@ class ProductCategories extends BaseProductCategories {
 
     public function updateProductCategory(array $data) {
         $errors = $this->__validateData($data);
-        if ($errors) {
+        if ($errors['error_flag']) {
             return $errors;
         } else {
             $is_active = FALSE;

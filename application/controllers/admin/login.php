@@ -28,8 +28,8 @@ class Login extends My_Controller {
                 $this->session->set_userdata('is_login' , true);
                 
                 $admin_info = array(
-                    'username' => $user['u_username'],
-                    'admin_id' => $user['u_id']
+                    'username' => $user['au_username'],
+                    'admin_id' => $user['au_id']
                 );
                 $this->session->set_userdata('admin_info' , $admin_info);
                 redirect(site_url('admin/dashboard'));

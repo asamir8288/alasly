@@ -688,3 +688,18 @@ label.error{
 .contact-us-address{
     float: left;width: 350px;
 }
+.contact-btn {
+    background-color: #c1161c;
+    font-size: 18px;
+    width: 210px;
+    height: 25px;
+    display: block;
+    color: #d8dde1;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
