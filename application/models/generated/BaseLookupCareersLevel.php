@@ -39,13 +39,13 @@ abstract class BaseLookupCareersLevel extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
-        $this->hasColumn('ar_name', 'string', 255, array(
+        $this->hasColumn('ar_name', 'string', 45, array(
              'type' => 'string',
-             'length' => 255,
+             'length' => 45,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
     }

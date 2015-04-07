@@ -37,12 +37,12 @@ abstract class BaseLookupCountries extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
-        $this->hasColumn('ar_name', 'string', 45, array(
+        $this->hasColumn('ar_name', 'string', 100, array(
              'type' => 'string',
-             'length' => 45,
+             'length' => 100,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,

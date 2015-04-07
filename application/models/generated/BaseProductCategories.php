@@ -9,8 +9,8 @@ Doctrine_Manager::getInstance()->bindComponent('ProductCategories', 'default');
  * 
  * @property integer $id
  * @property integer $lang_id
- * @property string $name
  * @property string $description
+ * @property string $name
  * @property string $banner_file
  * @property integer $is_active
  * @property integer $deleted
@@ -44,6 +44,14 @@ abstract class BaseProductCategories extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
+        $this->hasColumn('description', 'string', null, array(
+             'type' => 'string',
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
         $this->hasColumn('name', 'string', 45, array(
              'type' => 'string',
              'length' => 45,
@@ -53,21 +61,13 @@ abstract class BaseProductCategories extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
-        $this->hasColumn('description', 'string', null, array(
-             'type' => 'string',
-             'fixed' => false,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => true,
-             'autoincrement' => false,
-             ));
         $this->hasColumn('banner_file', 'string', 45, array(
              'type' => 'string',
              'length' => 45,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('is_active', 'integer', 1, array(
@@ -77,7 +77,7 @@ abstract class BaseProductCategories extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '1',
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('deleted', 'integer', 1, array(
@@ -87,7 +87,7 @@ abstract class BaseProductCategories extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '0',
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
     }

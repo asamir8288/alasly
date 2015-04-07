@@ -29,6 +29,7 @@
         <div id="wrapper">
             <div id="container">
                 <div class="left-section">
+                    <a href="<?php echo base_url() . 'change_lang/switch_lang'?>" class="lang"><?php echo ($lang_code == 'en-us') ? 'عربي' : 'English';?></a>
                     <a href="<?php echo base_url(); ?>" class="logo"></a>
 
                     <div class="search">
@@ -171,7 +172,7 @@
                         echo newProducts($lang_id); ?>
                     </ul>       
                     
-                    <a href="<?php echo base_url();?>Insert 2015 3sides.pdf" target="_blank" class="contact-btn">Download Brochure</a>
+                    <a href="<?php echo base_url();?>insert_2015_3sides.pdf" target="_blank" class="contact-btn">Download Brochure</a>
                 </div>
                 <div class="<?php echo isset($is_homepage) ? 'right-section' : 'inside-right-section'; ?>">                    
 

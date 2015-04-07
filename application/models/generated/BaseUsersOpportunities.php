@@ -10,8 +10,8 @@ Doctrine_Manager::getInstance()->bindComponent('UsersOpportunities', 'default');
  * @property integer $id
  * @property integer $profile_id
  * @property integer $opportunity_id
- * @property Opportunites $Opportunites
  * @property Profiles $Profiles
+ * @property Opportunites $Opportunites
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -54,12 +54,12 @@ abstract class BaseUsersOpportunities extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Opportunites', array(
-             'local' => 'opportunity_id',
-             'foreign' => 'id'));
-
         $this->hasOne('Profiles', array(
              'local' => 'profile_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Opportunites', array(
+             'local' => 'opportunity_id',
              'foreign' => 'id'));
     }
 }

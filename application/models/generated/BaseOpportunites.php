@@ -10,10 +10,10 @@ Doctrine_Manager::getInstance()->bindComponent('Opportunites', 'default');
  * @property integer $id
  * @property integer $lang_id
  * @property integer $country_id
- * @property string $city
  * @property integer $career_level_id
  * @property integer $industry_id
  * @property integer $job_role_id
+ * @property string $city
  * @property string $job_title
  * @property string $company_name
  * @property string $about_the_job
@@ -28,11 +28,11 @@ Doctrine_Manager::getInstance()->bindComponent('Opportunites', 'default');
  * @property timestamp $post_date
  * @property integer $deleted
  * @property integer $is_active
- * @property WebsiteLanguages $WebsiteLanguages
  * @property LookupCareersLevel $LookupCareersLevel
- * @property LookupCountries $LookupCountries
- * @property LookupIndustries $LookupIndustries
  * @property LookupJobRoles $LookupJobRoles
+ * @property LookupIndustries $LookupIndustries
+ * @property LookupCountries $LookupCountries
+ * @property WebsiteLanguages $WebsiteLanguages
  * @property Doctrine_Collection $UsersOpportunities
  * 
  * @package    ##PACKAGE##
@@ -59,7 +59,7 @@ abstract class BaseOpportunites extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('country_id', 'integer', 4, array(
@@ -69,15 +69,6 @@ abstract class BaseOpportunites extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
-             'autoincrement' => false,
-             ));
-        $this->hasColumn('city', 'string', 100, array(
-             'type' => 'string',
-             'length' => 100,
-             'fixed' => false,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('career_level_id', 'integer', 4, array(
@@ -101,6 +92,15 @@ abstract class BaseOpportunites extends Doctrine_Record
         $this->hasColumn('job_role_id', 'integer', 4, array(
              'type' => 'integer',
              'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('city', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
@@ -216,7 +216,7 @@ abstract class BaseOpportunites extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'default' => '0',
+             'default' => '1',
              'notnull' => false,
              'autoincrement' => false,
              ));
@@ -235,25 +235,25 @@ abstract class BaseOpportunites extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('WebsiteLanguages', array(
-             'local' => 'lang_id',
-             'foreign' => 'int'));
-
         $this->hasOne('LookupCareersLevel', array(
              'local' => 'career_level_id',
              'foreign' => 'id'));
 
-        $this->hasOne('LookupCountries', array(
-             'local' => 'country_id',
+        $this->hasOne('LookupJobRoles', array(
+             'local' => 'job_role_id',
              'foreign' => 'id'));
 
         $this->hasOne('LookupIndustries', array(
              'local' => 'industry_id',
              'foreign' => 'id'));
 
-        $this->hasOne('LookupJobRoles', array(
-             'local' => 'job_role_id',
+        $this->hasOne('LookupCountries', array(
+             'local' => 'country_id',
              'foreign' => 'id'));
+
+        $this->hasOne('WebsiteLanguages', array(
+             'local' => 'lang_id',
+             'foreign' => 'int'));
 
         $this->hasMany('UsersOpportunities', array(
              'local' => 'id',

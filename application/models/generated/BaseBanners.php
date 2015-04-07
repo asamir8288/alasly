@@ -57,7 +57,7 @@ abstract class BaseBanners extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '1',
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('created_at', 'timestamp', null, array(

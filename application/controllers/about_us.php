@@ -29,7 +29,7 @@ class About_us extends CI_Controller {
     
     public function profile() {
         $this->data['page_title'] = lang('frontend_page_title_about_profile');
-        $this->data['inside_banner'] = 'profile_banner.png';
+        $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'profile_banner.png' : 'profile_banner_ar.png';
         $page_id = 'profile';        
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
@@ -37,7 +37,7 @@ class About_us extends CI_Controller {
     
     public function mission() {
         $this->data['page_title'] = lang('frontend_page_title_about_mission');
-        $this->data['inside_banner'] = 'mission_banner.png';
+        $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'mission_banner.png' : 'mission_banner_ar.png';
         $page_id = 'mission';        
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
@@ -45,7 +45,7 @@ class About_us extends CI_Controller {
     
     public function innovation() {
         $this->data['page_title'] = lang('frontend_page_title_about_innovation');
-        $this->data['inside_banner'] = 'innovation_banner.png';
+        $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'innovation_banner.png' : 'innovation_banner.png';
         $page_id = 'innovation';        
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();
@@ -53,7 +53,7 @@ class About_us extends CI_Controller {
     
     public function foods_story() {
         $this->data['page_title'] = lang('frontend_page_title_about_foods_story');
-        $this->data['inside_banner'] = 'food_story_banner.png';
+        $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'food_story_banner.png' : 'food_story_banner_ar.png';
         $page_id = 'foods_story';        
         $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
         $this->template->render();

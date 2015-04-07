@@ -394,6 +394,9 @@ body{
     background-color: #FFF;
     margin-top: 30px;	
     margin-bottom: 30px;	
+    float: left;
+    position: relative;
+    left: 50px;
 }
 .product-details-table .title{
     font-size: 24px;
@@ -683,4 +686,24 @@ label.error{
 
 .contact-us-address{
     float: right;width: 350px;
+}
+.img {
+    position: relative;
+    top: 45px;
+    max-width: 350px;
+    max-height: 320px;
+}
+
+.lang{
+    background-color: #a5080c;
+    padding: 3px;
+    font-size: 12px;
+    float: left;
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+}
+.lang:hover{
+    background-color: #d3181f;
 }

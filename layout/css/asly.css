@@ -703,3 +703,16 @@ label.error{
     padding: 10px 20px;
     text-align: center;
 }
+.lang{
+    background-color: #a5080c;
+    padding: 1px 3px 5px 3px;
+    font-size: 12px;
+    float: right;
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+}
+.lang:hover{
+    background-color: #d3181f;
+}

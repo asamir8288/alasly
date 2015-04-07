@@ -95,7 +95,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('weight', 'string', 45, array(
@@ -104,7 +104,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('pack', 'string', 45, array(
@@ -113,7 +113,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('container_20', 'string', 45, array(
@@ -122,7 +122,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('container_40', 'string', 45, array(
@@ -131,7 +131,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('container_hc', 'string', 45, array(
@@ -140,7 +140,7 @@ abstract class BaseProducts extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('created_at', 'timestamp', null, array(
@@ -186,7 +186,7 @@ abstract class BaseProducts extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'default' => '0',
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
     }
