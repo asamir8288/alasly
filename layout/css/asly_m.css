@@ -106,7 +106,12 @@ label.error{
 }
 
 .social-links{
-    background-color: #8b8575;height: 80px;padding-top: 20px;margin-top: 25px;
+    border-bottom: #716D61 solid 1px;
+    background-color: #8b8575;
+    height: 80px;
+    padding-top: 20px;
+    margin-top: 25px;
+    border-top: #716D61 solid 1px;
 }
 
 .copyrights{
