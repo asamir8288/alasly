@@ -32,8 +32,14 @@ class Product extends CI_Controller {
             $this->data['product'] = ProductsTable::getOne($id);
             $this->data['page_title'] = $this->data['product']['name'];
 
-            $this->template->write_view('content', 'frontend/product_details', $this->data);
-            $this->template->render();
+            if (is_mobile()) {
+                $this->template->set_template('mobile');
+                $this->template->write_view('content', 'mobile/new_product_details', $this->data);
+                $this->template->render();
+            } else {
+                $this->template->write_view('content', 'frontend/product_details', $this->data);
+                $this->template->render();
+            }
         }
     }
 
@@ -44,13 +50,19 @@ class Product extends CI_Controller {
 
             $this->data['page_title'] = $this->data['category']['name'];
 
-            $this->template->write_view('content', 'frontend/product_category', $this->data);
-            $this->template->render();
+            if (is_mobile()) {
+                $this->template->set_template('mobile');
+                $this->template->write_view('content', 'mobile/list_products', $this->data);
+                $this->template->render();
+            } else {
+                $this->template->write_view('content', 'frontend/product_category', $this->data);
+                $this->template->render();
+            }
         } else {
             redirect('/');
         }
     }
-    
+
     public function list_products($cat_id) {
         if ($cat_id) {
             $this->data['category'] = ProductCategoriesTable::getOne($cat_id);
@@ -70,8 +82,14 @@ class Product extends CI_Controller {
 
         $this->data['page_title'] = lang('frontend_new_products');
 
-        $this->template->write_view('content', 'frontend/new_products', $this->data);
-        $this->template->render();
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/new_products', $this->data);
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/new_products', $this->data);
+            $this->template->render();
+        }
     }
 
 }

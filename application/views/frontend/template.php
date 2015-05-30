@@ -164,6 +164,10 @@
                                 <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
                                 <?php echo lang('menu_export'); ?></a></li>
                         <li class="separator"></li>
+                        <li><a style="top: 11px;" href="<?php echo base_url() . 'news'; ?>">
+                                <img src="<?php echo base_url() . 'layout/images/menu-contact-icon.png'; ?>" />
+                                <?php echo lang('frontend_menu_news'); ?></a></li>
+                        <li class="separator"></li>
                         <?php 
                         $lang_id = 1;
                         if ($lang_code != 'en-us') {

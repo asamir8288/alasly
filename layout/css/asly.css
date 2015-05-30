@@ -716,3 +716,34 @@ label.error{
 .lang:hover{
     background-color: #d3181f;
 }
+
+.news_img{
+    float: left;
+    display: block;
+}
+.news_title_desc{
+    float: left;
+    margin-left: 10px;
+    display: block;
+    width: 780px;
+}
+.news_title{
+    color: #a5080c;
+    font-size: 18px;
+}
+.horizontal_line{
+    clear: both;
+    width: 100%;
+    display: block;
+    height: 1px;
+    border-bottom: 1px dashed #C1C1C1;
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+}
+
+.news_details_img{
+    float: right;
+    max-width: 300px;
+    max-height: 300px;
+}

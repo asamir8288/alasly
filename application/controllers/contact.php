@@ -51,8 +51,15 @@ class Contact extends CI_Controller {
         $this->data['reasons'] = LookupContactReasonsTable::getAllReasons();
 
         $this->template->add_js('layout/js/jquery.validate.js');
-        $this->template->write_view('content', 'frontend/contact_form', $this->data);
-        $this->template->render();
+
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/contact_form', $this->data);
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/contact_form', $this->data);
+            $this->template->render();
+        }
     }
 
     public function export() {
@@ -76,8 +83,14 @@ class Contact extends CI_Controller {
         $this->data['reasons'] = LookupContactReasonsTable::getAllReasons();
 
         $this->template->add_js('layout/js/jquery.validate.js');
-        $this->template->write_view('content', 'frontend/export_form', $this->data);
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/export_form', $this->data);
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/export_form', $this->data);
         $this->template->render();
+        }                
     }
 
     private function sendEmail(array $data) {

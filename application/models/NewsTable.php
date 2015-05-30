@@ -16,4 +16,28 @@ class NewsTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('News');
     }
+    
+     public static function getOne($id) {
+        return Doctrine_Query::create()
+                ->select('n.*')
+                ->from('News n')
+                ->where('n.id =?', $id)
+                ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->fetchOne();
+    }
+    
+     public static function getAllNews($lang_id = 1, $active = FALSE) {
+        $q = Doctrine_Query::create()
+                ->select('n.*')
+                ->from('News n')
+                ->where('n.lang_id =?', $lang_id)
+                ->andWhere('n.deleted=0');
+        if ($active) {
+            $q = $q->andWhere('n.is_active=?', TRUE);
+        }
+        $q = $q->setHydrationMode(Doctrine::HYDRATE_ARRAY)
+                ->execute();
+        
+        return $q;
+    }
 }

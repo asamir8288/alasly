@@ -105,4 +105,20 @@ $lang['error_phone'] = 'من فضلك أدخل رقم الهاتف';
 $lang['error_message'] = 'من فضلك أدخل رسالتك';
 $lang['error_company'] = 'من فضلك أدخل اسم الشركة';
 $lang['error_reason'] = 'من فضلك أختر السبب';
+
+$lang['news_main_title'] = 'الأخبار';
+$lang['news_title'] = 'عنوان الخبر';
+$lang['news_image'] = 'صورة الخبر';
+$lang['news_description'] = 'توصيف الخبر';
+$lang['news_publish'] = 'اصدار';
+$lang['submit_btn_update'] = 'تعديل';
+$lang['submit_btn_add'] = 'اضافة خبر جديد';
+
+$lang['admin_news_added_message'] = 'لقد تم اضافة الخبر بنجاح!';
+$lang['admin_news_updated_message'] = 'لقد تم تعديل الخبر بنجاح!';
+
+$lang['frontend_list_news'] = 'قائمة الأخبار';
+$lang['frontend_news_see_more'] = 'اقرأ المزيد';
+$lang['frontend_menu_news'] = 'الأخبار';
+$lang['no_news'] = 'لا يوجد أخبار متاحة حالياً';
 ?>

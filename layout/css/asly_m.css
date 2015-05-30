@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+        url('../fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo{
+    background-image: url(../images/logo_m.png);
+    width: 60px;
+    height: 60px;
+    display: block;	
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+.inside-title {
+    color: #a5080c;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.product-details-table {
+    -webkit-box-shadow: 0px 1px 2px 0px #808080;
+    -moz-box-shadow: 0px 1px 2px 0px #808080;
+    box-shadow: 0px 1px 2px 0px #808080;
+    display: block;
+    background-color: #FFF;
+    margin-top: 30px;	
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.product-details-table .title{
+    font-size: 24px;
+    text-align: center!important;
+    text-transform: uppercase;
+    top: 10px;
+    position: relative;
+    color: #1e1e1e!important;
+}
+.product-details-table .title span{
+    font-size: 24px;
+    text-align: center;
+    color: #a5080c;
+    text-transform: uppercase;
+    font-family: 'open_sansbold';
+}
+.product-details-table .separator{ 
+    height: 1px;
+    width: 85%;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.product-details-table ul{
+    margin-left: -20px;
+}
+.product-details-table ul li{   
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: #696969;
+    font-family: 'open_sansbold';
+    border-bottom: 1px solid #000;
+    margin-right: 20px;
+    list-style: none!important;
+}
+.product-details-table ul li span{
+    color: #696969;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    font-weight: normal;
+}
+
+.prod-details .img-responsive {
+    margin: 0 auto;
+}
+
+.product-separator{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    height: 1px;
+    border: 1px dashed #C1C1C1;
+}
+label.error{
+    margin-left: 3px!important;
+    color: #FF0000;
+}
+.nav .nav-divider {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    height: 2px;
+    border-bottom: #EDEDED 1px solid;
+}
+
+.social-links{
+    background-color: #8b8575;height: 80px;padding-top: 20px;margin-top: 25px;
+}
+
+.copyrights{
+    text-align: center;
+    font-size: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

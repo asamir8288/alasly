@@ -102,4 +102,24 @@ $lang['error_phone'] = 'Please enter you phone number';
 $lang['error_message'] = 'Please enter your message';
 $lang['error_company'] = 'Please enter your company name';
 $lang['error_reason'] = 'Please select your reason';
+
+$lang['news_main_title'] = 'News';
+$lang['news_title'] = 'Title';
+$lang['news_image'] = 'Image';
+$lang['news_description'] = 'Description';
+$lang['news_publish'] = 'Publish';
+$lang['submit_btn_update'] = 'Update';
+$lang['submit_btn_add'] = 'Add News';
+
+$lang['admin_news_added_message'] = 'News has been added successfully';
+$lang['admin_news_updated_message'] = 'News has been updated successfully';
+
+$lang['frontend_list_news'] = 'List News';
+$lang['frontend_news_see_more'] = 'Read More';
+$lang['frontend_menu_news'] = 'News';
+$lang['no_news'] = 'There is no news right now!';
+
+
+$lang['frontend_page_title_about_sesame'] = 'About Sesame';
+
 ?>

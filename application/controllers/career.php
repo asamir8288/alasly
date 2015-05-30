@@ -50,24 +50,43 @@ class Career extends CI_Controller {
         $this->data['page_title'] = lang('frontend_page_title_career_mission');
         $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'career_mission_banner.png' : 'career_mission_banner_ar.png';
         $page_id = 'career-mission';
-        $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
-        $this->template->render();
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/static_page', $this->page_data($page_id));
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
+            $this->template->render();
+        }
     }
 
     public function why_alasly() {
         $this->data['page_title'] = lang('frontend_page_title_career_why_alasly');
         $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'why_alasly_banner.png' : 'why_alasly_banner_ar.png';
         $page_id = 'why-alasly';
-        $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
-        $this->template->render();
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/static_page', $this->page_data($page_id));
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
+            $this->template->render();
+        }
     }
 
     public function our_workplace() {
         $this->data['page_title'] = lang('frontend_page_title_career_workplace');
         $this->data['inside_banner'] = ($this->data['lang_id'] == 1) ? 'our_workplace_banner.png' : 'our_workplace_banner_ar.png';
         $page_id = 'our-workplace';
-        $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
-        $this->template->render();
+
+        if (is_mobile()) {
+            $this->template->set_template('mobile');
+            $this->template->write_view('content', 'mobile/static_page', $this->page_data($page_id));
+            $this->template->render();
+        } else {
+            $this->template->write_view('content', 'frontend/static_page', $this->page_data($page_id));
+            $this->template->render();
+        }
     }
 
     private function page_data($page_id) {

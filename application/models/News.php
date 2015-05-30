@@ -12,5 +12,118 @@
  */
 class News extends BaseNews
 {
+    public function addNews(array $data) {
+        $errors = $this->__validateNews($data);
 
+        if ($errors['error_flag']) {
+            return $errors;
+        } else {
+            $is_active = FALSE;
+            if (isset($data['is_active'])) {
+                $is_active = TRUE;
+            }
+
+            $n = new News();
+            $n->lang_id = $data['lang_id'];
+            $n->title = $data['title'];
+            $n->description = $data['description'];            
+            $n->image = $errors['image'];
+            $n->is_active = $is_active;
+            $n->created_at = date('ymdHis');
+            $n->save();
+
+            return $errors;
+        }
+    }
+
+    public function updateNews(array $data) {
+        $errors = $this->__validateNews($data);
+        if ($errors['error_flag']) {
+            return $errors;
+        } else {
+            $is_active = FALSE;
+            if (isset($data['is_active'])) {
+                $is_active = TRUE;
+            }
+
+            Doctrine_Query::create()
+                    ->update('News n')
+                    ->set('n.lang_id', '?', $data['lang_id'])
+                    ->set('n.title', '?', $data['title'])
+                    ->set('n.description', '?', $data['description'])
+                    ->set('n.image', '?', $errors['image'])
+                    ->set('n.is_active', '?', $is_active)
+                    ->set('n.updated_at', '?', date('ymdHis'))
+                    ->where('n.id =?', $data['id'])
+                    ->execute();
+
+            return $errors;
+        }
+    }
+
+    private function __validateNews(array $data) {
+        $error_flag = false;
+        $errors = array();
+
+        if (!required($data['title'])) {
+            $error_flag = true;
+            $errors['name'] = lang('name_field');
+        }
+        if (!required($data['description'])) {
+            $error_flag = true;
+            $errors['description'] = lang('description_field');
+        }
+
+        if (isset($data['id'])) {
+            if (isset($_FILES['userfile']) && !empty($_FILES['userfile']['name'])) {
+                $upload_data = upload_file('products', array('jpg|png|jpeg|gif'), '2028');
+                if ($upload_data['error_flag']) {
+                    $errors['image'] = $upload_data['errors'];
+                    $error_flag = true;
+                } else {
+                    $errors['image'] = $upload_data['upload_data']['file_name'];
+                }
+            } else if ($data['image']) {
+                $errors['image'] = $data['image'];
+            }
+        } else {
+            $upload_data = upload_file('news', array('jpg|png|jpeg|gif'), '2028');
+            if ($upload_data['error_flag']) {
+                $errors['image'] = $upload_data['errors'];
+                $error_flag = true;
+            } else {
+                $errors['image'] = $upload_data['upload_data']['file_name'];
+            }
+        }
+
+        $errors['error_flag'] = $error_flag;
+
+        return $errors;
+    }
+    
+    public function deleteNews($id) {
+        Doctrine_Query::create()
+                ->update('News n')
+                ->set('n.deleted' , '?', TRUE)
+                ->where('n.id =?', $id)
+                ->execute();
+    }
+    
+    public function switchStatus($id) {
+        $news = NewsTable::getInstance()->findBy('id', $id, Doctrine_Core::HYDRATE_SCALAR);
+
+        if ($news[0]['dctrn_find_is_active'] == '1') {
+            $this->updateStatus($id, FALSE);
+        } else {
+            $this->updateStatus($id, TRUE);
+        }
+    }       
+
+    private function updateStatus($id, $new_status) {
+        Doctrine_Query::create()
+                ->update('News n')
+                ->set('n.is_active', '?', $new_status)
+                ->where('n.id =?', $id)
+                ->execute();
+    }
 }

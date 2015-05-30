@@ -39,6 +39,8 @@
 */
 
 $route['default_controller'] = "home";
+$route['news'] = "manage_news/index";
+$route['news/details/(:any)'] = "manage_news/details/$1";
 $route['404_override'] = '';
 
 
