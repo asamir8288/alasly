@@ -1,21 +1,28 @@
+<?php
+$lang_code = $this->session->userdata('lang_code');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap.css?' . $this->config->item('static_version'); ?>" media="screen" />
-        <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap-theme.css?' . $this->config->item('static_version'); ?>" media="screen" />
-        <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/asly_m.css?' . $this->config->item('static_version'); ?>" media="screen" />
-
+        <?php if ($lang_code == 'en-us') { ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap.css?' . $this->config->item('static_version'); ?>" media="screen" />
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap-theme.css?' . $this->config->item('static_version'); ?>" media="screen" />
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/asly_m.css?' . $this->config->item('static_version'); ?>" media="screen" />
+        <?php } else { ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap-arabic.css?' . $this->config->item('static_version'); ?>" media="screen" />
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/bootstrap-arabic-theme.css?' . $this->config->item('static_version'); ?>" media="screen" />
+            <link rel="stylesheet" type="text/css" href="<?php echo static_url() . 'layout/css/asly_m_rtl.css?' . $this->config->item('static_version'); ?>" media="screen" />
+        <?php } ?>
         <script type="text/javascript" src="<?php echo static_url() . 'layout/js/jquery-1.9.1.min.js?' . $this->config->item('static_version'); ?>"></script>
         <script type="text/javascript" src="<?php echo static_url() . 'layout/js/bootstrap.min.js?' . $this->config->item('static_version'); ?>"></script>
         <script type="text/javascript" src="<?php echo static_url() . 'layout/js/jquery.validate.js?' . $this->config->item('static_version'); ?>"></script>
         <?php echo $_scripts; ?>
     </head>
-    <?php
-    $lang_code = $this->session->userdata('lang_code');
-    ?>
+
     <body>
         <div class="container-fluid">
             <div class="row">
@@ -136,10 +143,12 @@
                                 $html .= '<a href="' . site_url('product/new_products') . '">';
                                 $html .= lang('frontend_new_products') . '</a>';
                                 $html .= '</li>';
-                                
+
                                 echo $html;
                             }
                             ?> 
+                            <li class="nav-divider"></li>
+                            <li><a href="<?php echo base_url() . 'change_lang/switch_lang'?>" class="lang"><?php echo ($lang_code == 'en-us') ? 'عربي' : 'English';?></a></li>
                         </ul>
                     </div>
                 </nav>
